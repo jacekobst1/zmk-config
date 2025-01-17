@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 // Layer definitions
@@ -18,6 +19,8 @@
 #define SETTINGS 6
 
 // -----------------
+
+&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE SPACE MINUS>; };
 
 / {
     macros {
@@ -33,6 +36,67 @@
         // both left thumb keys
     };
 
+    behaviors {
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <130>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
+            hold-trigger-on-release;
+        };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <155>;
+            require-prior-idle-ms = <130>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <30 31 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 32 33>;
+            hold-trigger-on-release;
+        };
+
+        rthumb: rthumb {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RTHUMB";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <130>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 25 33 24 0 1 2 3 4 10>;
+        };
+
+        lthumb: lthumb {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTHUMB";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <150>;
+        };
+
+        hold_priority: hold_priority {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_PRIORITY";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <150>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -40,10 +104,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R      &kp T               &kp Y      &kp U          &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D  &kp F      &kp G               &kp H      &kp J          &kp K      &kp L    &kp SEMICOLON
-&kp Z  &kp X  &kp C  &kp V      &kp B               &kp N      &kp M          &kp COMMA  &kp DOT  &kp SLASH
-                     &kp SPACE  &mt LSHIFT SPACE    &kp SPACE  &kp BACKSPACE
+&kp Q  &kp W  &kp E  &kp R      &kp T            &kp Y      &kp U          &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F      &kp G            &kp H      &kp J          &kp K      &kp L    &kp SEMICOLON
+&kp Z  &kp X  &kp C  &kp V      &kp B            &kp N      &kp M          &kp COMMA  &kp DOT  &kp SLASH
+                     &kp SPACE  &mt LCTRL TAB    &kp ENTER  &kp BACKSPACE
             >;
         };
 
@@ -62,6 +126,15 @@
 &trans        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
 &trans        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
                               &trans  &trans    &trans  &trans
+            >;
+        };
+
+        settings_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans          &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &bt BT_CLR_ALL  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans          &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans          &trans
             >;
         };
 
