@@ -31,9 +31,53 @@
     combos {
         compatible = "zmk,combos";
 
-        // both right thumb keys
-        // internal-left & external-right thumb keys
-        // both left thumb keys
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <12 13>;
+        };
+
+        copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <22 23>;
+        };
+
+        paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <23 24>;
+        };
+
+        cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <22 24>;
+        };
+
+        escape {
+            bindings = <&kp ESC>;
+            key-positions = <16 17>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <0 1 2 3>;
+            layers = <0 4>;
+        };
+
+        caps_word {
+            bindings = <&caps_word>;
+            key-positions = <13 12 16 17>;
+            layers = <0>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <21 22>;
+            layers = <0>;
+        };
+
+        escape_left {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1 2 1>;
+        };
     };
 
     behaviors {
@@ -100,8 +144,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // Base alpha layer
-
         default_layer {
             bindings = <
 &kp Q  &kp W  &kp E  &kp R      &kp T            &kp Y      &kp U          &kp I      &kp O    &kp P
@@ -137,12 +179,5 @@
                         &trans  &trans    &trans          &trans
             >;
         };
-
-        // Numbers and high frequency symbols
-        // Main modifiers and arrow keys
-        // Function keys with modifiers
-        // Low frequency symbols.
-        // Used to type regional accents.
-        // Used to change the keyboard's settings.
     };
 };
