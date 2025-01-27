@@ -81,18 +81,18 @@
 
         scroll_up {
             bindings = <&msc SCRL_UP>;
-            key-positions = <6 7 8 9>;
+            key-positions = <6 7 8>;
         };
 
         scroll_down {
             bindings = <&msc SCRL_DOWN>;
-            key-positions = <26 27 28 29>;
+            key-positions = <26 27 28>;
             layers = <0 5>;
         };
 
         mouse_layer {
             bindings = <&mo 5>;
-            key-positions = <20 21>;
+            key-positions = <12 13 11 10>;
         };
     };
 
