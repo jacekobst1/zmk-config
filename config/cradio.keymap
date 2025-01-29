@@ -76,13 +76,14 @@
         };
 
         escape_left {
-            bindings = <&kp ESCAPE>;
+            bindings = <&kp ESC>;
             key-positions = <0 1 2 1>;
         };
 
         scroll_up {
             bindings = <&msc SCRL_UP>;
             key-positions = <6 7 8>;
+            layers = <0 5>;
         };
 
         scroll_down {
