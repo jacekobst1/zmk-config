@@ -5,7 +5,7 @@
  */
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 800  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 150    // default: 10
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -81,13 +81,13 @@
         };
 
         scroll_up {
-            bindings = <&msc SCRL_UP>;
+            bindings = <&scroll_up_down SCRL_UP>;
             key-positions = <6 7 8>;
             layers = <0 5>;
         };
 
         scroll_down {
-            bindings = <&msc SCRL_DOWN>;
+            bindings = <&scroll_up_down SCRL_DOWN>;
             key-positions = <26 27 28>;
             layers = <0 5>;
         };
@@ -164,6 +164,12 @@
             #binding-cells = <2>;
             tapping-term-ms = <230>;
             quick-tap-ms = <150>;
+        };
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            tap-ms = <20>;
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
     };
 
