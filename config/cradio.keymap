@@ -81,13 +81,13 @@
         };
 
         scroll_up {
-            bindings = <&scroll_up_down SCRL_UP>;
+            bindings = <&msc SCRL_UP>;
             key-positions = <6 7 8>;
             layers = <0 5>;
         };
 
         scroll_down {
-            bindings = <&scroll_up_down SCRL_DOWN>;
+            bindings = <&msc SCRL_DOWN>;
             key-positions = <26 27 28>;
             layers = <0 5>;
         };
@@ -164,12 +164,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <230>;
             quick-tap-ms = <150>;
-        };
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            tap-ms = <20>;
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
     };
 
