@@ -165,6 +165,13 @@
             tapping-term-ms = <230>;
             quick-tap-ms = <150>;
         };
+        
+        scroll_up_down: scroll_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <20>;
+        };
     };
 
     keymap {
@@ -222,6 +229,7 @@
 &none           &none     &none           &none     &none              &none           &none           &none         &none            &none
                                           &none     &tog_off 5         &mkp LCLK       &mkp RCLK
             >;
+         sensor-bindings = <&scroll_up_down>;
         };
     };
 };
