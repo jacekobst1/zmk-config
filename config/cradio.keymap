@@ -28,6 +28,13 @@
 // -----------------
 
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE SPACE MINUS>; };
+&msc {
+    x-input-code = <INPUT_REL_HWHEEL>;
+    y-input-code = <INPUT_REL_WHEEL>;
+    time-to-max-speed-ms = <200>;
+    acceleration-exponent = <0>;
+};
+
 
 / {
     macros {
@@ -166,14 +173,6 @@
             quick-tap-ms = <150>;
         };
 
-        scroll_up_down: scroll_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <20>;
-        };
-
         mouse_layout: mouse_layout {
             compatible = "zmk,behavior-hold-tap";
             label = "MOUSE_LAYOUT";
@@ -241,8 +240,6 @@
 &none           &none      &none           &none      &none              &none           &none           &none         &none            &none
                                            &none      &tog_off 5         &trans          &none
             >;
-
-            sensor-bindings = <&scroll_up_down>;
         };
     };
 };
