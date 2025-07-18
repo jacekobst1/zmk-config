@@ -12,8 +12,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 
 // Layer definitions
 
@@ -28,13 +26,13 @@
 // -----------------
 
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE SPACE MINUS>; };
+
 &msc {
     x-input-code = <INPUT_REL_HWHEEL>;
     y-input-code = <INPUT_REL_WHEEL>;
     time-to-max-speed-ms = <200>;
     acceleration-exponent = <0>;
 };
-
 
 / {
     macros {
@@ -183,6 +181,30 @@
             quick-tap-ms = <130>;
             hold-trigger-key-positions = <15 16 17 18 10 11 12 13 1 2 3 6>;
         };
+
+        left_shift_mode: left_shift_mode {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_SHIFT_MODE";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <160>;
+            require-prior-idle-ms = <120>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29>;
+        };
+
+        right_shift_mode: right_shift_mode {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_SHIFT_MODE";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <160>;
+            require-prior-idle-ms = <120>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24>;
+        };
     };
 
     keymap {
@@ -190,10 +212,10 @@
 
         base {
             bindings = <
-&kp Q         &kp W        &kp E        &kp R              &kp T                       &kp Y                  &kp U                &kp I        &kp O            &kp P
-&hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LEFT_SHIFT F  &kp G                       &kp H                  &hmr LEFT_SHIFT J    &hmr LGUI K  &hmr LEFT_ALT L  &hmr LCTRL SEMICOLON
-&kp Z         &kp X        &kp C        &kp V              &kp B                       &kp N                  &kp M                &kp COMMA    &kp DOT          &kp SLASH
-                                        &lthumb 1 SPACE    &hold_priority LCTRL TAB    &mouse_layout 5 ENTER  &rthumb 2 BACKSPACE
+&kp Q         &kp W        &kp E        &kp R                          &kp T                       &kp Y                        &kp U                           &kp I        &kp O            &kp P
+&hml LCTRL A  &hml LALT S  &hml LGUI D  &left_shift_mode LEFT_SHIFT F  &kp G                       &kp H                        &right_shift_mode LEFT_SHIFT J  &hmr LGUI K  &hmr LEFT_ALT L  &hmr LCTRL SEMICOLON
+&kp Z         &kp X        &kp C        &kp V                          &kp B                       &kp N                        &kp M                           &kp COMMA    &kp DOT          &kp SLASH
+                                        &lthumb 1 SPACE                &hold_priority LCTRL TAB    &hold_priority LSHIFT ENTER  &rthumb 2 BACKSPACE
             >;
         };
 
