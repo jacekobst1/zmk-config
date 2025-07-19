@@ -27,13 +27,6 @@
 
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE SPACE MINUS>; };
 
-&msc {
-    x-input-code = <INPUT_REL_HWHEEL>;
-    y-input-code = <INPUT_REL_WHEEL>;
-    time-to-max-speed-ms = <200>;
-    acceleration-exponent = <0>;
-};
-
 / {
     macros {
         // sometimes my device thinks a modifier is being held down
