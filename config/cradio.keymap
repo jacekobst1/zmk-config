@@ -232,9 +232,9 @@
 
         settings_3 {
             bindings = <
-&none         &none         &none         &none              &none             &none           &none      &none  &none  &none
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4      &bt BT_CLR_ALL  &none      &none  &none  &bt BT_CLR
-&sys_reset    &none         &none         &ext_power EP_OFF  &bootloader       &bootloader     &soft_off  &none  &none  &sys_reset
+&none         &none         &none         &none              &none             &none           &none           &none  &none  &none
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4      &bt BT_CLR_ALL  &studio_unlock  &none  &none  &bt BT_CLR
+&sys_reset    &none         &none         &ext_power EP_OFF  &bootloader       &bootloader     &soft_off       &none  &none  &sys_reset
                                           &none              &studio_unlock    &to 0           &none
             >;
         };
