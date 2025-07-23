@@ -78,7 +78,7 @@
 
         escape_left {
             bindings = <&kp ESC>;
-            key-positions = <0 1 1>;
+            key-positions = <0 1>;
             slow-release;
             require-prior-idle-ms = <180>;
             layers = <0>;
@@ -99,7 +99,7 @@
 
         mouse_layer {
             bindings = <&tog 5>;
-            key-positions = <21 20 21>;
+            key-positions = <21 20>;
             layers = <0 5>;
             slow-release;
             require-prior-idle-ms = <180>;
