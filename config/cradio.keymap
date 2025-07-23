@@ -5,7 +5,7 @@
  */
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 800  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 50    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -89,17 +89,29 @@
             bindings = <&msc SCRL_UP>;
             key-positions = <6 7 8>;
             layers = <0 5>;
+            slow-release;
+            require-prior-idle-ms = <180>;
         };
 
         scroll_down {
             bindings = <&msc SCRL_DOWN>;
             key-positions = <26 27 28>;
             layers = <0 5>;
+            slow-release;
+            require-prior-idle-ms = <180>;
         };
 
         mouse_layer {
             bindings = <&tog 5>;
             key-positions = <21 20>;
+            layers = <0 5>;
+            slow-release;
+            require-prior-idle-ms = <180>;
+        };
+
+        mouse_layer_right {
+            bindings = <&tog 5>;
+            key-positions = <28 29>;
             layers = <0 5>;
             slow-release;
             require-prior-idle-ms = <180>;
