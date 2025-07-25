@@ -111,7 +111,7 @@
 
         mouse_layer_right {
             bindings = <&tog 5>;
-            key-positions = <28 29>;
+            key-positions = <17 18>;
             layers = <0 5>;
             slow-release;
             require-prior-idle-ms = <180>;
