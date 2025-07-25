@@ -63,10 +63,10 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <10 11>;
+            key-positions = <10 11 12>;
             layers = <0 4>;
             slow-release;
-            require-prior-idle-ms = <180>;
+            require-prior-idle-ms = <220>;
             timeout-ms = <40>;
         };
 
@@ -80,7 +80,7 @@
             bindings = <&kp ESC>;
             key-positions = <0 1>;
             slow-release;
-            require-prior-idle-ms = <180>;
+            require-prior-idle-ms = <200>;
             layers = <0>;
             timeout-ms = <40>;
         };
