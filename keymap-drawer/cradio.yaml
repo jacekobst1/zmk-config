@@ -109,10 +109,10 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - '&soft_off'
+  - OUT USB
+  - OUT BLE
+  - '&soft_off'
   - ''
   - ''
   - ''
@@ -132,7 +132,7 @@ layers:
   - EP OFF
   - '&bootloader'
   - '&bootloader'
-  - '&soft_off'
+  - ''
   - ''
   - ''
   - '&sys_reset'
