@@ -1,5 +1,9 @@
 # ⌨️ 34-Key ZMK Layout (Ferris Sweep 🦀)
 
+<p align="center">
+<img width="600" height="600" alt="Ferris sweep" src="https://github.com/user-attachments/assets/1be1e12a-c086-413c-a513-dd6dac9d81e6" />
+</p>
+
 My personal keymap for the Ferris Sweep using [ZMK](https://zmk.dev/), drawn with [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
 
 ## 🧠 Design Philosophy
