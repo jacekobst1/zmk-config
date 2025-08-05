@@ -29,4 +29,6 @@ My personal keymap for the Ferris Sweep using [ZMK](https://zmk.dev/), drawn wit
 
 ## 🖼️ Layer Map
 
-<img src="./keymap-drawer/cradio.svg" alt="My personal keymap" width="600">
+<p align="center">
+<img src="./keymap-drawer/cradio.svg" alt="My personal keymap" width="1024">
+</p>
