@@ -1,19 +1,19 @@
 draw_config:
   key_w: 60
   key_h: 60
-  split_gap: 30.0
+  split_gap: 10.0
   combo_w: 28
-  combo_h: 26
+  combo_h: 28
   key_rx: 6.0
   key_ry: 6.0
-  dark_mode: auto
+  dark_mode: true
   n_columns: 2
   separate_combo_diagrams: true
   combo_diagrams_scale: 3
   inner_pad_w: 2.0
   inner_pad_h: 2.0
   outer_pad_w: 30.0
-  outer_pad_h: 56.0
+  outer_pad_h: 60.0
   line_spacing: 1.2
   arc_radius: 6.0
   append_colon_to_layer_header: true
@@ -142,6 +142,12 @@ draw_config:
 
     rect.combo, rect.combo-separate{
        fill: #1f3d7a;
+       x: 60;
+       width: 60px;
+       height: 60px;
+    }
+    text.combo-separate {
+       transform: translateX(90px) translatey(4px);
     }
   footer_text: Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>
   shrink_wide_legends: 7
