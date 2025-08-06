@@ -6,7 +6,7 @@ on:
     paths:
       - "config/*.keymap"
       - "config/*.dtsi"
-      - "keymap-drawer/config.yaml"
+      - "tools/keymap-drawer/config.yaml"
 
 jobs:
   draw:
@@ -15,6 +15,6 @@ jobs:
       contents: write
     with:
       keymap_patterns: 'config/*.keymap'
-      config_path: keymap-drawer/config.yaml
-      output_folder: keymap-drawer
+      config_path: tools/keymap-drawer/config.yaml
+      output_folder: tools/keymap-drawer
       amend_commit: true

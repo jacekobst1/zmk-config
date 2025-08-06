@@ -4,7 +4,6 @@
 <img width="600" height="600" alt="Ferris sweep" src="https://github.com/user-attachments/assets/b81f97ac-0166-47d5-a392-54801568a16a" />
 </p>
 
-
 My personal keymap for the Ferris Sweep using [ZMK](https://zmk.dev/), drawn with [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
 
 ## 🧠 Design Philosophy
@@ -31,5 +30,5 @@ My personal keymap for the Ferris Sweep using [ZMK](https://zmk.dev/), drawn wit
 ## 🖼️ Layer Map
 
 <p align="center">
-<img src="./keymap-drawer/cradio.svg" alt="My personal keymap" width="1024">
+<img src="./tools/keymap-drawer/cradio.svg" alt="My personal keymap" width="1024">
 </p>
