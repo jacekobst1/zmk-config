@@ -153,6 +153,9 @@ combos:
   k: Gui+V
 - p: [23, 21]
   k: Gui+X
+- p: [6, 7, 8]
+  k: '&msc SCRL_UP'
+  l: [base, mouse]
 - p: [16, 17]
   k: ESC
 - p: [10, 11, 12]
@@ -161,21 +164,15 @@ combos:
 - p: [13, 12, 16, 17]
   k: '&caps_word'
   l: [base]
-- p: [0, 1]
-  k: ESC
-  l: [base]
-- p: [6, 7, 8]
-  k: '&msc SCRL_UP'
-  l: [base, mouse]
-- p: [26, 27, 28]
-  k: '&msc SCRL_DOWN'
-  l: [base, mouse]
-- p: [21, 20]
-  k: {t: mouse, h: toggle}
-  l: [base, mouse]
 - p: [17, 18]
   k: {t: mouse, h: toggle}
   l: [base, mouse]
 - p: [1, 2, 3]
   k: {t: one_hand_numpad, h: toggle}
   l: [base, one_hand_numpad]
+- p: [26, 27, 28]
+  k: '&msc SCRL_DOWN'
+  l: [base, mouse]
+- p: [0, 1]
+  k: ESC
+  l: [base]

@@ -57,6 +57,14 @@
             key-positions = <23 21>;
         };
 
+        scroll_up {
+            bindings = <&msc SCRL_UP>;
+            key-positions = <6 7 8>;
+            layers = <0 5>;
+            slow-release;
+            require-prior-idle-ms = <180>;
+        };
+
         escape {
             bindings = <&kp ESC>;
             key-positions = <16 17>;
@@ -77,39 +85,6 @@
             layers = <0>;
         };
 
-        escape_left {
-            bindings = <&kp ESC>;
-            key-positions = <0 1>;
-            slow-release;
-            require-prior-idle-ms = <200>;
-            layers = <0>;
-            timeout-ms = <40>;
-        };
-
-        scroll_up {
-            bindings = <&msc SCRL_UP>;
-            key-positions = <6 7 8>;
-            layers = <0 5>;
-            slow-release;
-            require-prior-idle-ms = <180>;
-        };
-
-        scroll_down {
-            bindings = <&msc SCRL_DOWN>;
-            key-positions = <26 27 28>;
-            layers = <0 5>;
-            slow-release;
-            require-prior-idle-ms = <180>;
-        };
-
-        mouse_layer {
-            bindings = <&tog 5>;
-            key-positions = <21 20>;
-            layers = <0 5>;
-            slow-release;
-            require-prior-idle-ms = <180>;
-        };
-
         mouse_layer_right {
             bindings = <&tog 5>;
             key-positions = <17 18>;
@@ -124,6 +99,23 @@
             require-prior-idle-ms = <200>;
             slow-release;
             layers = <0 4>;
+        };
+
+        scroll_down {
+            bindings = <&msc SCRL_DOWN>;
+            key-positions = <26 27 28>;
+            layers = <0 5>;
+            slow-release;
+            require-prior-idle-ms = <180>;
+        };
+
+        escape_left {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+            slow-release;
+            require-prior-idle-ms = <200>;
+            layers = <0>;
+            timeout-ms = <40>;
         };
     };
 
