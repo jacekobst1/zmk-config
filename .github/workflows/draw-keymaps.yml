@@ -1,13 +1,12 @@
 # Draw keymap diagrams using keymap-drawer ZMK user config workflow
 name: Draw ZMK keymaps
 on:
-  workflow_dispatch:  # can be triggered manually
-  push:               # automatically run on changes to following paths
+  workflow_dispatch:
+  push:
     paths:
       - "config/*.keymap"
       - "config/*.dtsi"
-      - "keymap_drawer.config.yaml"
-      # - 'boards/*/*/*.keymap'
+      - "keymap-drawer/config.yaml"
 
 jobs:
   draw:
