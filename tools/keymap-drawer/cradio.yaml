@@ -1,0 +1,178 @@
+layout: {zmk_keyboard: cradio}
+layers:
+  BASE:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LCTRL}
+  - {t: S, h: LALT}
+  - {t: D, h: LGUI}
+  - {t: F, h: LSHFT}
+  - G
+  - H
+  - {t: J, h: RSHFT}
+  - {t: K, h: RGUI}
+  - {t: L, h: LALT}
+  - {t: ;, h: RCTRL}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: SPACE, h: SYM}
+  - {t: TAB, h: LCTRL}
+  - {t: ENTER, h: LSHFT}
+  - {t: BSPC, h: NAV}
+  SYM:
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - {t: '|', h: LCTRL}
+  - {t: _, h: LALT}
+  - {t: '{', h: LGUI}
+  - {t: '[', h: LSHFT}
+  - /
+  - \
+  - {t: ']', h: LSHFT}
+  - {t: '}', h: LGUI}
+  - {t: '-', h: LALT}
+  - {t: ':', h: LCTRL}
+  - '~'
+  - '='
+  - '`'
+  - ''''
+  - '-'
+  - +
+  - '"'
+  - <
+  - '>'
+  - '?'
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  NAV:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: PSCRN, h: LCTRL}
+  - {t: ▽, type: trans}
+  - {t: PREV, h: LCMD}
+  - {t: PP, h: LSHFT}
+  - NEXT
+  - LEFT
+  - {t: DOWN, h: LSHFT}
+  - {t: UP, h: LGUI}
+  - {t: RIGHT, h: LALT}
+  - {t: VOL UP, h: LCTRL}
+  - MUTE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PG UP
+  - HOME
+  - END
+  - PG DN
+  - ','
+  - .
+  - VOL DN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  FNC:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - LCTRL
+  - LALT
+  - LGUI
+  - LSHFT
+  - F11
+  - F12
+  - LSHFT
+  - LGUI
+  - LALT
+  - LCTRL
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: '&sys_reset', h: '&bootloader'}
+  - {t: '&sys_reset', h: '&bootloader'}
+  - '&studio_unlock'
+  - ''
+  - BT CLR
+  - BT CLR ALL
+  - {type: held}
+  - ''
+  - ''
+  - {type: held}
+  MSE: ['', '&mkp MB4', '&mkp MCLK', '&mkp MB5', '', '', '&msc SCRL_UP', '', '', '', '&msc SCRL_LEFT', '&mkp RCLK', '&msc SCRL_DOWN', '&mkp LCLK', '&msc SCRL_RIGHT',
+    '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_UP', '&mmv MOVE_RIGHT', '', '', '', '', '', '', '', '', '', '', '', '', '&tof 5', '&tof 5', '']
+combos:
+- p: [12, 13]
+  k: DELETE
+  l: [BASE]
+- p: [21, 22]
+  k: Gui+C
+  l: [BASE]
+- p: [22, 23]
+  k: Gui+V
+  l: [BASE]
+- p: [6, 7, 8]
+  k: '&msc SCRL_UP'
+  l: [BASE, MSE]
+- p: [16, 17]
+  k: ESC
+  l: [BASE]
+- p: [12, 13, 15, 16]
+  k: '&caps_word'
+  l: [BASE]
+- p: [10, 11, 12]
+  k: ENTER
+  l: [BASE]
+- p: [21, 23]
+  k: Gui+X
+  l: [BASE]
+- p: [17, 18]
+  k: {t: MSE, h: toggle}
+  l: [BASE, MSE]
+- p: [26, 27, 28]
+  k: '&msc SCRL_DOWN'
+  l: [BASE, MSE]
+- p: [0, 1]
+  k: ESC
+  l: [BASE]

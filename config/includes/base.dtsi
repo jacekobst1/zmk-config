@@ -1,0 +1,218 @@
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 800  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#ifdef EXTERNAL_POWER
+#    include <dt-bindings/zmk/ext_power.h>
+#endif
+#include <dt-bindings/zmk/pointing.h>
+
+// Layer definitions
+#define BASE 0
+#define SYM 1
+#define NAV 2
+#define FNC 3
+#define MSE 4
+
+#include "combos.dtsi"
+
+&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE SPACE MINUS DEL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>; };
+
+/ {
+    macros {};
+
+   cond_layers {
+        compatible = "zmk,conditional-layers";
+        // Define FNC layer as tri-state
+        func_tristate {
+            if-layers = <SYM NAV>;
+            then-layer = <FNC>;
+        };
+    };
+
+    behaviors {
+        tof: toggle_layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer off";
+            toggle-mode = "off";
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <130>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <155>;
+            require-prior-idle-ms = <130>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        rth: rthumb {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RTHUMB";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <130>;
+            hold-trigger-key-positions = <LTROW RTROW RMROW LB0 RB4 RB0 THUMBS>;
+        };
+
+        lth: lthumb {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTHUMB";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <150>;
+        };
+
+        hp: hold_priority {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_PRIORITY";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <150>;
+        };
+
+        lsm: left_shift_mode {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_SHIFT_MODE";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <120>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        rsm: right_shift_mode {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_SHIFT_MODE";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <120>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        rst_boot: rst_boot {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <500>;
+            flavor = "tap-preferred";
+            bindings = <&bootloader>, <&sys_reset>;
+        };
+
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        base {
+            display-name = "BASE";
+            bindings = <LAYER_FROM36( \
+// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭───────────────┬───────────────┬───────────────┬─────────────┬───────────────╮
+     &kp Q,        &kp W,        &kp E,        &kp R,        &kp T,            &kp Y,           &kp U,          &kp I,        &kp O,           &kp P,      \
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├───────────────┼───────────────┼───────────────┼─────────────┼───────────────┤
+     &hml LCTRL A, &hml LALT S,  &hml LGUI D,  &lsm LSHFT F, &kp G,            &kp H,           &rsm RSHFT J, &hmr RGUI K,    &hmr LALT L,  &hmr RCTRL SEMI,\
+// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├───────────────┼───────────────┼───────────────┼─────────────┼───────────────┤
+     &kp Z,        &kp X,        &kp C,        &kp V,        &kp B,            &kp N,           &kp M,          &kp COMMA,      &kp DOT,     &kp SLASH,    \
+// ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├───────────────┼───────────────┼───────────────┴─────────────┴───────────────╯
+                                 &trans,      &lth SYM SPACE, &hp LCTRL TAB,  &hp LSHFT ENTER,  &rth NAV BSPC,   &trans
+//                             ╰─────────────┴─────────────┴─────────────╯   ╰───────────────┴───────────────┴─────────────╯
+            )>;
+        };
+
+        symbol {
+          display-name = "SYM";
+          bindings = <LAYER_FROM36( \
+// ╭───────────────┬───────────────┬───────────────┬────────────────────┬───────────────╮   ╭───────────────┬────────────────────┬────────────────────┬────────────────────┬────────────────────╮
+    &kp EXCL,        &kp AT_SIGN,     &kp HASH,        &kp DLLR,           &kp PRCNT,         &kp CARET,       &kp AMPS,            &kp ASTERISK,          &kp LPAR,             &kp RPAR,      \
+// ├───────────────┼───────────────┼───────────────┼────────────────────┼───────────────┤   ├───────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
+    &hml LCTRL PIPE, &hml LALT UNDER, &hml LGUI LBRC, &hml LSHFT LBKT,    &kp SLASH,          &kp BSLH,        &hmr LSHFT RBKT,    &hmr LGUI RBRC,       &hmr LALT MINUS,     &hmr LCTRL COLON, \
+// ├───────────────┼───────────────┼───────────────┼────────────────────┼───────────────┤   ├───────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
+      &kp TILDE,       &kp EQUAL,      &kp GRAVE,       &kp SQT,            &kp MINUS,         &kp PLUS,        &kp DOUBLE_QUOTES,  &kp LESS_THAN,       &kp GREATER_THAN,     &kp QUESTION,    \
+// ╰───────────────┴───────────────┴───────────────┼────────────────────┼───────────────┤   ├───────────────┼────────────────────┴────────────────────┴────────────────────┴────────────────────╯
+                                       &trans,          &trans,             &trans,              &trans,        &trans,             &trans       \
+//                                 ╰───────────────┴────────────────────┴───────────────╯   ╰───────────────┴────────────────────┴───────────────╯
+         )>;
+      };
+
+        nav_number {
+            display-name = "NAV";
+            bindings = <LAYER_FROM36( \
+// ╭──────────────────┬───────────────┬────────────────────┬─────────────────┬──────────────╮   ╭────────────────────┬─────────────────┬───────────────┬──────────────────┬─────────────────────╮
+     &kp N1,               &kp N2,      &kp N3,              &kp N4,           &kp N5,             &kp N6,             &kp N7,            &kp N8,        &kp N9,            &kp N0,             \
+// ├──────────────────┼───────────────┼────────────────────┼─────────────────┼──────────────┤   ├────────────────────┼─────────────────┼───────────────┼──────────────────┼─────────────────────┤
+     &hml LCTRL PSCRN,    &trans,       &hml LCMD C_PREV,    &lsm LSHFT C_PP,  &kp C_NEXT,         &kp LEFT,           &hmr LSHFT DOWN,   &hmr LGUI UP,  &hmr LALT RIGHT,   &hmr LCTRL C_VOL_UP,\
+// ├──────────────────┼───────────────┼────────────────────┼─────────────────┼──────────────┤   ├────────────────────┼─────────────────┼───────────────┼──────────────────┼─────────────────────┤
+     &kp C_MUTE,          &trans,       &trans,              &kp PG_UP,        &kp HOME,           &kp END,            &kp PG_DN,         &kp COMMA,      &kp DOT,          &kp C_VOL_DN,       \
+// ╰──────────────────┴───────────────┴────────────────────┼─────────────────┼──────────────┤   ├────────────────────┴─────────────────┴───────────────┴──────────────────┴─────────────────────╯
+                                              &trans,        &trans,           &trans,             &trans,               &trans,              &trans     \
+//                                    ╰────────────────────┴─────────────────┴──────────────╯   ╰────────────────────┴─────────────────┴───────────────╯
+        )>;
+      };
+
+        settings_function {
+            display-name = "FNC";
+            bindings = <LAYER_FROM36( \
+// ╭────────────────────┬────────────────────┬────────────────────┬────────────────────┬────────────────────╮   ╭─────────────────┬─────────────────┬───────────────┬───────────────┬────────────────────╮
+     &kp F1,               &kp F2,               &kp F3,               &kp F4,             &kp F5,                 &kp F6,           &kp F7,          &kp F8,          &kp F9,          &kp F10,         \
+// ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤   ├─────────────────┼─────────────────┼───────────────┼───────────────┼────────────────────┤
+     &kp LCTRL,            &kp LALT,             &kp LGUI,             &kp LSHFT,         &kp F11,                 &kp F12,          &kp LSHFT,       &kp LGUI,        &kp LALT,        &kp LCTRL,       \
+// ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤   ├─────────────────┼─────────────────┼───────────────┼───────────────┼────────────────────┤
+     &bt BT_SEL 0,        &bt BT_SEL 1,          &bt BT_SEL 2,        &bt BT_SEL 3,      &rst_boot 0 0,           &rst_boot 0 0,     &studio_unlock,  &none,           &bt BT_CLR,      &bt BT_CLR_ALL,  \
+// ╰────────────────────┴────────────────────┴────────────────────┼────────────────────┼────────────────────┤   ├─────────────────┴─────────────────┴───────────────┴───────────────┴────────────────────╯
+                                                &trans,               &none,               &none,                  &none,            &none,           &trans         \
+//                                           ╰────────────────────┴────────────────────┴────────────────────╯   ╰─────────────────┴─────────────────┴────────────────╯
+         )>;
+      };
+
+        mouse_layer {
+            display-name = "MSE";
+            bindings = <LAYER_FROM36( \
+// ╭────────────────────┬───────────────┬────────────────────┬───────────────┬────────────────────╮   ╭─────────────────┬────────────────────┬────────────────────┬────────────────────┬────────────────────╮
+     &none,               &mkp MB4,         &mkp MCLK,          &mkp MB5,      &none,                   &none,                &msc SCRL_UP,          &none,          &none,                 &none,          \
+// ├────────────────────┼───────────────┼────────────────────┼───────────────┼────────────────────┤   ├─────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
+     &msc SCRL_LEFT,      &mkp RCLK,        &msc SCRL_DOWN,     &mkp LCLK,     &msc SCRL_RIGHT,         &mmv MOVE_LEFT,       &mmv MOVE_DOWN,        &mmv MOVE_UP,   &mmv MOVE_RIGHT,        &none,         \
+// ├────────────────────┼───────────────┼────────────────────┼───────────────┼────────────────────┤   ├─────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
+     &none,               &none,            &none,              &none,         &none,                   &none,                &none,                 &none,          &none,                  &none,         \
+// ╰────────────────────┴───────────────┴────────────────────┼───────────────┼────────────────────┤   ├─────────────────┴────────────────────┴────────────────────┴────────────────────┴────────────────────╯
+                                                &trans,               &none,    &tof 5,                  &tof 5,               &none,              &trans
+//                                      ╰────────────────────┴───────────────┴────────────────────╯   ╰─────────────────┴────────────────────┴────────────────────╯
+         )>;
+        };
+    };
+
+};
