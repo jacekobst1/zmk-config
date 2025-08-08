@@ -6,6 +6,7 @@ on:
     paths:
       - "config/*.keymap"
       - "config/*.dtsi"
+      - "config/includes/*.dtsi"
       - "tools/keymap-drawer/config.yaml"
 
 jobs:

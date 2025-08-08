@@ -1,0 +1,86 @@
+/* KEY POSITIONS (using keypos_def helpers)
+╭─────────────────────┬─────────────────────╮
+│ LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 │
+│ LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 │
+│ LB4 LB3 LB2 LB1 LB0 │ RB0 RB1 RB2 RB3 RB4 │
+╰───────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────╯
+        ╰─────────────┴─────────────╯       */
+
+/{
+  combos {
+      compatible = "zmk,combos";
+
+      delete {
+          bindings = <&kp DELETE>;
+          key-positions = <LM2 LM1>;
+      };
+
+      copy {
+          bindings = <&kp LG(C)>;
+          key-positions = <LB3 LB2>;
+      };
+
+      paste {
+          bindings = <&kp LG(V)>;
+          key-positions = <LB2 LB1>;
+      };
+
+      cut {
+          bindings = <&kp LG(X)>;
+          key-positions = <LB3 LB1>;
+      };
+
+      scroll_up {
+          bindings = <&msc SCRL_UP>;
+          key-positions = <RT1 RT2 RT3>;
+          layers = <BASE MSE>;
+          slow-release;
+          require-prior-idle-ms = <180>;
+      };
+
+      escape {
+          bindings = <&kp ESC>;
+          key-positions = <RM1 RM2>;
+      };
+
+      enter {
+          bindings = <&kp ENTER>;
+          key-positions = <LM4 LM3 LM2>;
+          layers = <BASE>;
+          slow-release;
+          require-prior-idle-ms = <220>;
+          timeout-ms = <40>;
+      };
+
+      caps_word {
+          bindings = <&caps_word>;
+          key-positions = <LM2 LM1 RM0 RM1>;
+          layers = <BASE>;
+      };
+
+      mouse_layer_right {
+          bindings = <&tog MSE>;
+          key-positions = <RM2 RM3>;
+          layers = <BASE>;
+          slow-release;
+          require-prior-idle-ms = <180>;
+      };
+
+      scroll_down {
+          bindings = <&msc SCRL_DOWN>;
+          key-positions = <RB1 RB2 RB3>;
+          layers = <BASE>;
+          slow-release;
+          require-prior-idle-ms = <180>;
+      };
+
+      escape_left {
+          bindings = <&kp ESC>;
+          key-positions = <LT4 LT3>;
+          slow-release;
+          require-prior-idle-ms = <200>;
+          layers = <BASE>;
+          timeout-ms = <40>;
+      };
+  };
+};
