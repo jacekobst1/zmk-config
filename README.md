@@ -1,35 +1,64 @@
-# ⌨️ 34-Key ZMK Layout (Ferris Sweep 🦀)
+# ⌨️ 34-Key ZMK Layouts
 
-<p align="center">
-<img width="600" height="600" alt="Ferris sweep" src="https://github.com/user-attachments/assets/b81f97ac-0166-47d5-a392-54801568a16a" />
-</p>
+| [🦀 Ferris Sweep](https://github.com/davidphilipbarr/Sweep) | [🪸 Urchin](https://github.com/duckyb/urchin) |
+|-------------------------------------------------------------|--------------------------------------------------|
+| <img width="200" height="200" alt="Ferris Sweep" src="https://github.com/user-attachments/assets/b81f97ac-0166-47d5-a392-54801568a16a" /> | <img width="200" height="200" alt="Urchin" src="https://github.com/user-attachments/assets/3eb89138-079e-4ab2-a906-678a655aec41"  /> |
 
+This is my personal [ZMK](https://zmk.dev/) keymap shared across two different 34-key keyboards. It’s drawn using [keymap-drawer](https://github.com/caksoylar/keymap-drawer) and includes configurations for both dongle-based and dongleless setups.
 
-My personal keymap for the Ferris Sweep using [ZMK](https://zmk.dev/), drawn with [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
+---
 
-## 🧠 Design Philosophy
+## 🛠️ Firmware Builds
 
-- My keymap tries to retain some familiar QWERTY features — for example, using the top row for numbers and symbols, similar to a traditional layout.
-- Naturally, with a 34-key layout, not everything can be replicated, but I aim to keep frequently used characters close to the home row — such as []{}\_-|:),
-  and also to the thumb key the ones that i use most (space, backspace, ctrl, tab)
-- I use combos too, and in some cases I’ve added duplicate combos (like Enter or Escape) for one-handed use (when using mouse) — The ones that i really use (mostly) are on right_hand
-- 🔴Currently, function keys are not included in my keymap. I haven’t missed them yet, but I’ll add them when I do.
+Both keyboards support two connection styles:
+
+### 🔌 Dongle Setup
+
+- `<keyboard_name>_dongle` → Flash to the dongle  
+- `<keyboard_name>_left_peripheral` → Flash to the left half  
+- `<keyboard_name>_right` → Flash to the right half  
+
+### 📶 Dongleless Setup
+
+- `<keyboard_name>_left_central` → Flash to the left half (acting as central)  
+- `<keyboard_name>_right` → Flash to the right half  
+
+---
+
+## 🧠 Layout Philosophy
+
+- The layout loosely follows QWERTY conventions — for example, the top row still houses numbers and common symbols.
+- With only 34 keys, space is tight. I prioritize frequently used characters and modifiers close to the home row and thumbs (e.g., `[]{}_-|:`, space, backspace, control, tab).
+- Combos are used sparingly and intentionally to avoid accidental activations.
+
+---
 
 ## 🎯 Key Features
 
-- ⌨️ **Home-row mods** inspired by [urob's timeless layout](https://github.com/urob/zmk-config)
-  - 🧠 **Hold-tap logic** with tuned tapping terms and release conditions
-- 🎨 **Small combo keys** (Enter, Esc, Cut/Copy/Paste, Mouse toggle, Numpad)
-- 🎛️ Multi-layered:
-  - **BASE**: QWERTY with mod tap
-  - **SYMBOL**: Symbols and punctuation (Top row on qwerty)
-  - **NAVIGATION_NUMBER**: Number rows, with vim-style navigation
-  - **MOUSE**: Mouse related
-  - **SETTINGS**: Bluetooth, bootloader, reset
-  - **ONE-HAND NUMPAD** layer for quick entry
+- **Home-row mods** inspired by [urob’s timeless layout](https://github.com/urob/zmk-config)  
+  - Tuned **hold-tap behavior** for reliable mod/tap distinction
+- **Combos** for essentials like:
+  - Enter, Escape  
+  - Cut / Copy / Paste  
+  - Mouse toggle  
+- **Multi-layer design**:
+  - `BASE`: Standard QWERTY with mod-taps  
+  - `SYMBOL`: Symbols and punctuation (top-row behavior)  
+  - `NAVIGATION_NUMBER`: Vim-style navigation and number row  
+  - `MSE`: Mouse keys and pointer control  
+  - `FUNC`: Bluetooth, bootloader, reset  
+
+---
 
 ## 🖼️ Layer Map
 
 <p align="center">
-<img src="./keymap-drawer/cradio.svg" alt="My personal keymap" width="1024">
+  <img src="./keymap-drawer/cradio.svg" alt="Keymap diagram" width="1024">
 </p>
+
+---
+
+## 🙌 Credits
+
+- [urob/zmk-config](https://github.com/urob/zmk-config) — for home-row mod philosophy and layout ideas  
+- [caksoylar/zmk-config](https://github.com/caksoylar/zmk-config) — for layout structure, code inspiration, and keymap-drawer integration  
