@@ -152,7 +152,6 @@ draw_config:
     use.mdi\:mouse-left-click-outline,
     use.mdi\:mouse-right-click-outline {
       transform: scale(1.6);
-      transform-origin: center;
     }
   footer_text: <a href="https://github.com/MuhametSmaili/zmk-config">MuhametSmaili/zmk-config</a>
   shrink_wide_legends: 7
@@ -299,17 +298,17 @@ parse_config:
     C_PREV: $$mdi:skip-backward$$
     BT: $$mdi:bluetooth$$
     tof: Toggle
-    LCTRL: Ctrl
-    RCTRL: Ctrl
-    LALT: Alt
-    RALT: Alt
-    LGUI: Gui
-    RGUI: Gui
-    LSHFT: Shift
-    RSHFT: Shift
+    LCTRL: $$phosphor:regular/control$$
+    RCTRL: $$phosphor:regular/control$$
+    LALT: $$phosphor:regular/option$$
+    RALT: $$phosphor:regular/option$$
+    LGUI: $$phosphor:regular/command$$
+    RGUI: $$phosphor:regular/command$$
+    LSHFT: $$phosphor:regular/arrow-fat-up$$
+    RSHFT: $$phosphor:regular/arrow-fat-up$$
     ESC: Esc
     SPACE: ␣
-    BSPC: $$phosphor:regular/backspace$$
+    BSPC: ⌫
     RET: ⏎
     ENTER: ⏎
     TAB: ↹

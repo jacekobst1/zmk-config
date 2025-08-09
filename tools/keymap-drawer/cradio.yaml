@@ -11,16 +11,16 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: Ctrl}
-  - {t: S, h: Alt}
-  - {t: D, h: Gui}
-  - {t: F, h: Shift}
+  - {t: A, h: '$$phosphor:regular/control$$'}
+  - {t: S, h: '$$phosphor:regular/option$$'}
+  - {t: D, h: '$$phosphor:regular/command$$'}
+  - {t: F, h: '$$phosphor:regular/arrow-fat-up$$'}
   - G
   - H
-  - {t: J, h: Shift}
-  - {t: K, h: Gui}
-  - {t: L, h: Alt}
-  - {t: ;, h: Ctrl}
+  - {t: J, h: '$$phosphor:regular/arrow-fat-up$$'}
+  - {t: K, h: '$$phosphor:regular/command$$'}
+  - {t: L, h: '$$phosphor:regular/option$$'}
+  - {t: ;, h: '$$phosphor:regular/control$$'}
   - Z
   - X
   - C
@@ -32,8 +32,8 @@ layers:
   - .
   - /
   - {t: ␣, h: SYM}
-  - {t: ↹, h: Ctrl}
-  - {t: ENTER, h: Shift}
+  - {t: ↹, h: '$$phosphor:regular/control$$'}
+  - {t: ⏎, h: '$$phosphor:regular/arrow-fat-up$$'}
   - {t: ⌫, h: NAV}
   SYM:
   - '!'
@@ -46,16 +46,16 @@ layers:
   - '*'
   - (
   - )
-  - {t: '|', h: Ctrl}
-  - {t: _, h: Alt}
-  - {t: '{', h: Gui}
-  - {t: '[', h: Shift}
+  - {t: '|', h: '$$phosphor:regular/control$$'}
+  - {t: _, h: '$$phosphor:regular/option$$'}
+  - {t: '{', h: '$$phosphor:regular/command$$'}
+  - {t: '[', h: '$$phosphor:regular/arrow-fat-up$$'}
   - /
   - \
-  - {t: ']', h: Shift}
-  - {t: '}', h: Gui}
-  - {t: '-', h: Alt}
-  - {t: ':', h: Ctrl}
+  - {t: ']', h: '$$phosphor:regular/arrow-fat-up$$'}
+  - {t: '}', h: '$$phosphor:regular/command$$'}
+  - {t: '-', h: '$$phosphor:regular/option$$'}
+  - {t: ':', h: '$$phosphor:regular/control$$'}
   - '~'
   - '='
   - '`'
@@ -81,26 +81,26 @@ layers:
   - '8'
   - '9'
   - '0'
-  - {t: Print Scrn, h: Ctrl}
+  - {t: Print Scrn, h: '$$phosphor:regular/control$$'}
   - {t: ▽, type: trans}
-  - {t: ⏮️, h: LCMD}
-  - {t: ⏯, h: Shift}
-  - ⏭️
+  - {t: '$$mdi:skip-backward$$', h: '$$phosphor:regular/command$$'}
+  - {t: '$$mdi:play-pause$$', h: '$$phosphor:regular/arrow-fat-up$$'}
+  - $$mdi:skip-forward$$
   - ←
-  - {t: ↓, h: Shift}
-  - {t: ↑, h: Gui}
-  - {t: →, h: Alt}
-  - {t: Vol Up, h: Ctrl}
-  - MUTE
+  - {t: ↓, h: '$$phosphor:regular/arrow-fat-up$$'}
+  - {t: ↑, h: '$$phosphor:regular/command$$'}
+  - {t: →, h: '$$phosphor:regular/option$$'}
+  - {t: '$$mdi:volume-high$$', h: '$$phosphor:regular/control$$'}
+  - $$mdi:volume-off$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Page ↑
+  - PgUp
   - Home
   - End
-  - Page ↓
+  - PgDwn
   - ','
   - .
-  - Vol Down
+  - $$mdi:volume-medium$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -116,23 +116,23 @@ layers:
   - F8
   - F9
   - F10
-  - Ctrl
-  - Alt
-  - Gui
-  - Shift
+  - $$phosphor:regular/control$$
+  - $$phosphor:regular/option$$
+  - $$phosphor:regular/command$$
+  - $$phosphor:regular/arrow-fat-up$$
   - F11
   - F12
-  - Shift
-  - Gui
-  - Alt
-  - Ctrl
+  - $$phosphor:regular/arrow-fat-up$$
+  - $$phosphor:regular/command$$
+  - $$phosphor:regular/option$$
+  - $$phosphor:regular/control$$
   - BT 1
   - BT 2
   - BT 3
   - BT 4
   - {t: Reset, h: Boot}
   - {t: Reset, h: Boot}
-  - '&studio_unlock'
+  - Studio Unlock
   - Out BLE
   - BT CLR
   - BT CLR ALL
@@ -140,8 +140,9 @@ layers:
   - ''
   - ''
   - {type: held}
-  MSE: ['', Back Click, Middle Click, Forward Click, '', '', Scroll ↑, '', '', '', Scroll ←, Left Click, Scroll ↓, Right Click, Scroll →, Mouse ←, Mouse ↓, Mouse
-      ↑, Mouse →, '', '', '', '', '', '', '', '', '', '', '', '&tof 4', Left Click, Right Click, '']
+  MSE: ['', Back Click, Middle Click, Forward Click, '', '', Scroll ↑, '', '', '', Scroll ←, '$$mdi:mouse-left-click-outline$$', Scroll ↓, '$$mdi:mouse-right-click-outline$$',
+    Scroll →, Mouse ←, Mouse ↓, Mouse ↑, Mouse →, '', '', '', '', '', '', '', '', '', '', '', '&tof 4', '$$mdi:mouse-left-click-outline$$', '$$mdi:mouse-right-click-outline$$',
+    '']
 combos:
 - p: [12, 13]
   k: DELETE
@@ -162,7 +163,7 @@ combos:
   k: Caps Word
   l: [BASE]
 - p: [10, 11, 12]
-  k: ENTER
+  k: ⏎
   l: [BASE]
 - p: [21, 23]
   k: Cut
@@ -177,7 +178,7 @@ combos:
   k: Esc
   l: [BASE]
 - p: [14, 15]
-  k: '&soft_off'
+  k: Soft Off
   l: [FNC]
 - p: [6, 8]
   k: Out USB
