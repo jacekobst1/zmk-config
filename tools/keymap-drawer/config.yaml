@@ -7,7 +7,7 @@ draw_config:
   key_rx: 6.0
   key_ry: 6.0
   dark_mode: true
-  n_columns: 2
+  n_columns: 1
   separate_combo_diagrams: true
   combo_diagrams_scale: 3
   inner_pad_w: 2.0
@@ -149,7 +149,12 @@ draw_config:
     text.combo-separate {
        transform: translateX(90px) translatey(4px);
     }
-  footer_text: "MuhametSmaili/zmk-config"
+    use.mdi\:mouse-left-click-outline,
+    use.mdi\:mouse-right-click-outline {
+      transform: scale(1.6);
+      transform-origin: center;
+    }
+  footer_text: <a href="https://github.com/MuhametSmaili/zmk-config">MuhametSmaili/zmk-config</a>
   shrink_wide_legends: 7
   style_layer_activators: true
   glyph_tap_size: 14
@@ -166,6 +171,8 @@ parse_config:
     '&ind_bat': Show Batt
     '&ind_con': Show Conn
 
+    '&studio_unlock': Studio Unlock
+    '&soft_off': Soft Off
     '&out OUT_USB': Out USB
     '&out OUT_BLE': Out BLE
 
@@ -185,8 +192,8 @@ parse_config:
     '&msc SCRL_LEFT': Scroll ←
     '&msc SCRL_RIGHT': Scroll →
 
-    '&mkp LCLK': Left Click
-    '&mkp RCLK': Right Click
+    '&mkp LCLK': $$mdi:mouse-left-click-outline$$
+    '&mkp RCLK': $$mdi:mouse-right-click-outline$$
     '&mkp MCLK': Middle Click
     '&mkp MB4': Back Click
     '&mkp MB5': Forward Click
@@ -200,14 +207,14 @@ parse_config:
   layer_legend_map: {}
   mark_alternate_layer_activators: false
   modifier_fn_map:
-    left_ctrl: Ctl
-    right_ctrl: Ctl
-    left_shift: Sft
-    right_shift: Sft
-    left_alt: Alt
-    right_alt: AltGr
-    left_gui: Gui
-    right_gui: Gui
+    left_ctrl: $$phosphor:regular/control$$
+    right_ctrl: $$phosphor:regular/control$$
+    left_shift: $$phosphor:regular/arrow-fat-up$$
+    right_shift: $$phosphor:regular/arrow-fat-up$$
+    left_alt: $$phosphor:regular/option$$
+    right_alt: $$phosphor:regular/option$$
+    left_gui: $$phosphor:regular/command$$
+    right_gui: $$phosphor:regular/command$$
     keycode_combiner: '{mods}+{key}'
     mod_combiner: '{mod_1}+{mod_2}'
     special_combinations:
@@ -284,10 +291,14 @@ parse_config:
     QUES: '?'
   zmk_remove_keycode_prefix: []
   zmk_keycode_map:
-    C_VOL_UP: Vol Up
-    C_VOL_DN: Vol Down
-    studio_unlock: Unlock Studio
-
+    C_MUTE: $$mdi:volume-off$$
+    C_PP: $$mdi:play-pause$$
+    C_VOL_UP: $$mdi:volume-high$$
+    C_VOL_DN: $$mdi:volume-medium$$
+    C_NEXT: $$mdi:skip-forward$$
+    C_PREV: $$mdi:skip-backward$$
+    BT: $$mdi:bluetooth$$
+    tof: Toggle
     LCTRL: Ctrl
     RCTRL: Ctrl
     LALT: Alt
@@ -298,13 +309,14 @@ parse_config:
     RSHFT: Shift
     ESC: Esc
     SPACE: ␣
-    BSPC: ⌫
+    BSPC: $$phosphor:regular/backspace$$
     RET: ⏎
+    ENTER: ⏎
     TAB: ↹
     DEL: ⌦
 
-    PG_UP: Page ↑
-    PG_DN: Page ↓
+    PG_UP: PgUp
+    PG_DN: PgDwn
     INS: Insert
     HOME: Home
     END: End
@@ -318,9 +330,6 @@ parse_config:
     DOWN: ↓
     LEFT: ←
     RIGHT: →
-    C_PP: ⏯
-    C_NEXT: ⏭️
-    C_PREV: ⏮️
 
     EXCLAMATION: '!'
     EXCL: '!'
