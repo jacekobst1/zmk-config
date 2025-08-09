@@ -149,9 +149,15 @@ draw_config:
     text.combo-separate {
        transform: translateX(90px) translatey(4px);
     }
-    use.mdi\:mouse-left-click-outline,
-    use.mdi\:mouse-right-click-outline {
-      transform: scale(1.6);
+    use.phosphor\:regular\/arrow-fat-up,
+    use.phosphor\:regular\/command,
+    use.phosphor\:regular\/option,
+    use.phosphor\:regular\/mouse-right-click,
+    use.phosphor\:regular\/backspace,
+    use.phosphor\:regular\/key-return,
+    use.phosphor\:regular\/mouse-left-click,
+    use.phosphor\:regular\/control {
+      color: #cdd6f4
     }
   footer_text: <a href="https://github.com/MuhametSmaili/zmk-config">MuhametSmaili/zmk-config</a>
   shrink_wide_legends: 7
@@ -174,6 +180,8 @@ parse_config:
     '&soft_off': Soft Off
     '&out OUT_USB': Out USB
     '&out OUT_BLE': Out BLE
+    '&tof MSE': Toggle MSE
+    '&tof 4': Toggle MSE
 
     '&bt BT_SEL 0': BT 1
     '&bt BT_SEL 1': BT 2
@@ -191,8 +199,8 @@ parse_config:
     '&msc SCRL_LEFT': Scroll ←
     '&msc SCRL_RIGHT': Scroll →
 
-    '&mkp LCLK': $$mdi:mouse-left-click-outline$$
-    '&mkp RCLK': $$mdi:mouse-right-click-outline$$
+    '&mkp LCLK': $$phosphor:regular/mouse-left-click$$
+    '&mkp RCLK': $$phosphor:regular/mouse-right-click$$
     '&mkp MCLK': Middle Click
     '&mkp MB4': Back Click
     '&mkp MB5': Forward Click
@@ -307,10 +315,10 @@ parse_config:
     LSHFT: $$phosphor:regular/arrow-fat-up$$
     RSHFT: $$phosphor:regular/arrow-fat-up$$
     ESC: Esc
-    SPACE: ␣
-    BSPC: ⌫
-    RET: ⏎
-    ENTER: ⏎
+    SPACE: $$mdi:keyboard-space$$
+    BSPC: $$phosphor:regular/backspace$$
+    RET: $$phosphor:regular/key-return$$
+    ENTER: $$phosphor:regular/key-return$$
     TAB: ↹
     DEL: ⌦
 
