@@ -3,9 +3,12 @@ manifest:
     # zmk official
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-      # for urchin keeb
+      # Urchin keeb
     - name: duckyb
       url-base: https://github.com/duckyb
+      # Extra module for battery indicator
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -13,6 +16,9 @@ manifest:
       import: app/west.yml
     - name: urchin-zmk-module
       remote: duckyb
+      revision: main
+    - name: zmk-rgbled-widget
+      remote: caksoylar
       revision: main
   self:
     path: config
