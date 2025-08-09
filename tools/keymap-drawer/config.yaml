@@ -149,13 +149,19 @@ draw_config:
     text.combo-separate {
        transform: translateX(90px) translatey(4px);
     }
+
+    use.phosphor\:regular\/mouse-right-click,
+    use.phosphor\:regular\/mouse-left-click{
+      transform: scale(1.6)
+    }
+
     use.phosphor\:regular\/arrow-fat-up,
     use.phosphor\:regular\/command,
     use.phosphor\:regular\/option,
     use.phosphor\:regular\/mouse-right-click,
+    use.phosphor\:regular\/mouse-left-click,
     use.phosphor\:regular\/backspace,
     use.phosphor\:regular\/key-return,
-    use.phosphor\:regular\/mouse-left-click,
     use.phosphor\:regular\/control {
       color: #cdd6f4
     }
@@ -317,10 +323,11 @@ parse_config:
     ESC: Esc
     SPACE: $$mdi:keyboard-space$$
     BSPC: $$phosphor:regular/backspace$$
-    RET: $$phosphor:regular/key-return$$
-    ENTER: $$phosphor:regular/key-return$$
+    RET: ⏎
+    ENTER: ⏎
     TAB: ↹
     DEL: ⌦
+    DELETE: Delete
 
     PG_UP: PgUp
     PG_DN: PgDwn

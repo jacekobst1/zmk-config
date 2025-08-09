@@ -31,10 +31,10 @@ layers:
   - ','
   - .
   - /
-  - {t: ␣, h: SYM}
+  - {t: '$$mdi:keyboard-space$$', h: SYM}
   - {t: ↹, h: '$$phosphor:regular/control$$'}
   - {t: ⏎, h: '$$phosphor:regular/arrow-fat-up$$'}
-  - {t: ⌫, h: NAV}
+  - {t: '$$phosphor:regular/backspace$$', h: NAV}
   SYM:
   - '!'
   - '@'
@@ -140,12 +140,12 @@ layers:
   - ''
   - ''
   - {type: held}
-  MSE: ['', Back Click, Middle Click, Forward Click, '', '', Scroll ↑, '', '', '', Scroll ←, '$$mdi:mouse-left-click-outline$$', Scroll ↓, '$$mdi:mouse-right-click-outline$$',
-    Scroll →, Mouse ←, Mouse ↓, Mouse ↑, Mouse →, '', '', '', '', '', '', '', '', '', '', '', '&tof 4', '$$mdi:mouse-left-click-outline$$', '$$mdi:mouse-right-click-outline$$',
+  MSE: ['', Back Click, Middle Click, Forward Click, '', '', Scroll ↑, '', '', '', Scroll ←, '$$phosphor:regular/mouse-left-click$$', Scroll ↓, '$$phosphor:regular/mouse-right-click$$',
+    Scroll →, Mouse ←, Mouse ↓, Mouse ↑, Mouse →, '', '', '', '', '', '', '', '', '', '', '', Toggle MSE, '$$phosphor:regular/mouse-left-click$$', '$$phosphor:regular/mouse-right-click$$',
     '']
 combos:
 - p: [12, 13]
-  k: DELETE
+  k: Delete
   l: [BASE]
 - p: [21, 22]
   k: Copy
