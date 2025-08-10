@@ -79,7 +79,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <230>;
             quick-tap-ms = <130>;
-            hold-trigger-key-positions = <LTROW RTROW RMROW LB0 RB0 LB4 RB4 THUMBS>;
+            hold-trigger-key-positions = <LTROW RTROW RMROW LB0 RB0 LM4 LB4 RB4 THUMBS>;
         };
 
         lth: lthumb {
