@@ -32,7 +32,7 @@
     COMBO(scroll_down,       &msc SCRL_DOWN,     RB1 RB2 RB3,        BASE MSE,   40, 180, slow-release;)
     COMBO(escape_left,       &kp ESC,            LT4 LT3,            BASE,       40, 200, slow-release;)
     COMBO(softoff,           &soft_off,          LM0 RM0,            FNC,        1000, 200)
-    COMBO(use_usb,           &out OUT_USB,       RT1 RT3,            FNC,        40, 200)
+    COMBO(bt_clear_all,      &bt BT_CLR_ALL,     LB4 RB4,            FNC,        40, 200)
     COMBO(indbat,            &ind_bat,           LT2 RT2,            FNC,        100, 200)
     COMBO(indcon,            &ind_con,           LT1 RT1,            FNC,        100, 200)
   };

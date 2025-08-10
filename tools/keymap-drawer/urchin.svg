@@ -891,19 +891,19 @@ use.phosphor\:regular\/control {
 <g transform="translate(570, 150)" class="key keypos-27">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">Out</tspan><tspan x="0" dy="1.2em">BLE</tspan>
+<tspan x="0" dy="-0.6em">Out</tspan><tspan x="0" dy="1.2em">USB</tspan>
 </text>
 </g>
 <g transform="translate(630, 169)" class="key keypos-28">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">BT</tspan><tspan x="0" dy="1.2em">CLR</tspan>
+<tspan x="0" dy="-0.6em">Out</tspan><tspan x="0" dy="1.2em">BLE</tspan>
 </text>
 </g>
 <g transform="translate(690, 207)" class="key keypos-29">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">BT</tspan><tspan x="0" dy="1.2em">CLR</tspan><tspan x="0" dy="1.2em">ALL</tspan>
+<tspan x="0" dy="-0.6em">BT</tspan><tspan x="0" dy="1.2em">CLR</tspan>
 </text>
 </g>
 <g transform="translate(237, 236) rotate(15.0)" class="key held keypos-30">
@@ -2403,7 +2403,7 @@ use.phosphor\:regular\/control {
 <g transform="translate(30, 30)" class="key  combo-separate keypos-0">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key  combo-separate"/>
 <text x="0" y="0" class="key  combo-separate tap">
-<tspan x="0" dy="-0.6em">Out</tspan><tspan x="0" dy="1.2em">USB</tspan>
+<tspan x="0" dy="-1.2em">BT</tspan><tspan x="0" dy="1.2em">CLR</tspan><tspan x="0" dy="1.2em">ALL</tspan>
 </text>
 </g>
 <g transform="translate(10, 91)" class="key keypos-1">
@@ -2424,14 +2424,14 @@ use.phosphor\:regular\/control {
 <g transform="translate(150, 80)" class="key keypos-6">
 <rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key"/>
 </g>
-<g transform="translate(170, 78)" class="key held keypos-7">
-<rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key held"/>
+<g transform="translate(170, 78)" class="key keypos-7">
+<rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key"/>
 </g>
 <g transform="translate(190, 72)" class="key keypos-8">
 <rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key"/>
 </g>
-<g transform="translate(210, 78)" class="key held keypos-9">
-<rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key held"/>
+<g transform="translate(210, 78)" class="key keypos-9">
+<rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key"/>
 </g>
 <g transform="translate(230, 91)" class="key keypos-10">
 <rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key"/>
@@ -2466,8 +2466,8 @@ use.phosphor\:regular\/control {
 <g transform="translate(230, 111)" class="key keypos-20">
 <rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key"/>
 </g>
-<g transform="translate(10, 131)" class="key keypos-21">
-<rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key"/>
+<g transform="translate(10, 131)" class="key held keypos-21">
+<rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key held"/>
 </g>
 <g transform="translate(30, 118)" class="key keypos-22">
 <rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key"/>
@@ -2493,8 +2493,8 @@ use.phosphor\:regular\/control {
 <g transform="translate(210, 118)" class="key keypos-29">
 <rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key"/>
 </g>
-<g transform="translate(230, 131)" class="key keypos-30">
-<rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key"/>
+<g transform="translate(230, 131)" class="key held keypos-30">
+<rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key held"/>
 </g>
 <g transform="translate(79, 141) rotate(15.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-8" y="-8" width="16" height="16" class="key"/>

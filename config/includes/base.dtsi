@@ -78,7 +78,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <230>;
-            quick-tap-ms = <130>;
+            quick-tap-ms = <140>;
             hold-trigger-key-positions = <LTROW RTROW RMROW LB0 RB0 LM4 LB4 RB4 THUMBS>;
         };
 
@@ -89,7 +89,7 @@
             flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <230>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <155>;
         };
 
         hp: hold_priority {
@@ -194,7 +194,7 @@
 // ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤   ├─────────────────┼─────────────────┼───────────────┼───────────────┼────────────────────┤
      &kp LCTRL,            &kp LALT,             &kp LGUI,             &kp LSHFT,         &kp F11,                 &kp F12,          &kp LSHFT,       &kp LGUI,        &kp LALT,        &kp LCTRL,       \
 // ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤   ├─────────────────┼─────────────────┼───────────────┼───────────────┼────────────────────┤
-     &bt BT_SEL 0,        &bt BT_SEL 1,          &bt BT_SEL 2,        &bt BT_SEL 3,      &rst_boot 0 0,           &rst_boot 0 0,     &studio_unlock,  &out OUT_BLE,    &bt BT_CLR,      &bt BT_CLR_ALL,  \
+     &bt BT_SEL 0,        &bt BT_SEL 1,          &bt BT_SEL 2,        &bt BT_SEL 3,      &rst_boot 0 0,           &rst_boot 0 0,     &studio_unlock,  &out OUT_USB,    &out OUT_BLE,    &bt BT_CLR,      \
 // ╰────────────────────┴────────────────────┴────────────────────┼────────────────────┼────────────────────┤   ├─────────────────┴─────────────────┴───────────────┴───────────────┴────────────────────╯
                                                 &trans,               &none,               &none,                  &none,            &none,           &trans         \
 //                                           ╰────────────────────┴────────────────────┴────────────────────╯   ╰─────────────────┴─────────────────┴────────────────╯

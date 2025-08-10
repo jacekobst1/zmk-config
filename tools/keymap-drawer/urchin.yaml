@@ -133,9 +133,9 @@ layers:
   - {t: Reset, h: Boot}
   - {t: Reset, h: Boot}
   - Studio Unlock
+  - Out USB
   - Out BLE
   - BT CLR
-  - BT CLR ALL
   - {type: held}
   - ''
   - ''
@@ -180,8 +180,8 @@ combos:
 - p: [14, 15]
   k: Soft Off
   l: [FNC]
-- p: [6, 8]
-  k: Out USB
+- p: [20, 29]
+  k: BT CLR ALL
   l: [FNC]
 - p: [2, 7]
   k: Show Batt
