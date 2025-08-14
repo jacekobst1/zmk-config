@@ -8,7 +8,7 @@ draw_config:
   key_ry: 6.0
   dark_mode: true
   n_columns: 1
-  separate_combo_diagrams: true
+  separate_combo_diagrams: false
   combo_diagrams_scale: 3
   inner_pad_w: 2.0
   inner_pad_h: 2.0
@@ -139,8 +139,10 @@ draw_config:
     .icon-tabler > path[stroke="none"][fill="none"] {
         visibility: hidden;
     }
-
-    rect.combo, rect.combo-separate{
+    rect.combo{
+        fill: #1f3d7a;
+    }
+    rect.combo-separate{
        fill: #1f3d7a;
        x: 60;
        width: 60px;
@@ -181,14 +183,12 @@ parse_config:
     '&caps_word': Caps Word
     '&ind_bat': Show Batt
     '&ind_con': Show Conn
-
     '&studio_unlock': Studio Unlock
     '&soft_off': Soft Off
     '&out OUT_USB': Out USB
     '&out OUT_BLE': Out BT
     '&tof MSE': Toggle MSE
     '&tof 4': Toggle MSE
-
     '&bt BT_SEL 0': BT 1
     '&bt BT_SEL 1': BT 2
     '&bt BT_SEL 2': BT 3
@@ -196,23 +196,19 @@ parse_config:
     '&bt BT_SEL 4': BT 5
     '&bt BT_CLR_ALL': BT Clear All
     '&bt BT_CLR': BT Clear
-
     '&mmv MOVE_UP': Mouse ↑
     '&mmv MOVE_DOWN': Mouse ↓
     '&mmv MOVE_LEFT': Mouse ←
     '&mmv MOVE_RIGHT': Mouse →
-
     '&msc SCRL_UP': Scroll ↑
     '&msc SCRL_DOWN': Scroll ↓
     '&msc SCRL_LEFT': Scroll ←
     '&msc SCRL_RIGHT': Scroll →
-
     '&mkp LCLK': $$phosphor:regular/mouse-left-click$$
     '&mkp RCLK': $$phosphor:regular/mouse-right-click$$
     '&mkp MCLK': Middle Click
     '&mkp MB4': Back Click
     '&mkp MB5': Forward Click
-
   sticky_label: sticky
   toggle_label: toggle
   tap_toggle_label: tap-toggle
@@ -330,23 +326,19 @@ parse_config:
     TAB: ↹
     DEL: ⌦
     DELETE: Delete
-
     PG_UP: PgUp
     PG_DN: PgDwn
     INS: Insert
     HOME: Home
     END: End
     PSCRN: Print Scrn
-
     LG(C): Copy
     LG(X): Cut
     LG(V): Paste
-
     UP: ↑
     DOWN: ↓
     LEFT: ←
     RIGHT: →
-
     EXCLAMATION: '!'
     EXCL: '!'
     AT_SIGN: '@'
@@ -411,6 +403,28 @@ parse_config:
     NON_US_HASH: '#'
     NUHS: '#'
     TILDE2: '~'
-  zmk_combos: {}
+  zmk_combos:
+    combo_scroll_up:
+      a: top
+      o: 0.4
+    combo_scroll_down:
+      a: bottom
+      o: 0.2
+    combo_caps_word:
+      draw_separate: true
+    combo_enter:
+      draw_separate: true
+    combo_cut:
+      a: bottom
+      o: 0.2
+    combo_bt_clear_all:
+      a: bottom
+      o: 1.3
+    combo_indbat:
+      a: top
+      o: 1
+    combo_indcon:
+      a: bottom
+      o: 0.5
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []
