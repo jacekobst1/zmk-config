@@ -424,7 +424,7 @@ parse_config:
       a: top
       o: 1
     combo_indcon:
-      a: bottom
+      a: top
       o: 0.5
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []
