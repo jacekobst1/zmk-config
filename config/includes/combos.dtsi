@@ -25,7 +25,7 @@
     COMBO(paste,             &kp LG(V),          LB2 LB1,            BASE,       50, 120)
     COMBO(scroll_up,         &msc SCRL_UP,       RT1 RT2 RT3,        BASE MSE,   50, 180, slow-release;)
     COMBO(escape,            &kp ESC,            RM1 RM2,            BASE,       40, 0)
-    COMBO(caps_word,         &caps_word,         LM2 LM1 RM0 RM1,    BASE,       50, 0)
+    COMBO(caps_word,         &caps_word,         LM2 LM1 RM1 RM2,    BASE,       50, 0)
     COMBO(enter,             &kp ENTER,          LM4 LM3 LM2,        BASE,       40, 220, slow-release;)
     COMBO(cut,               &kp LG(X),          LB3 LB1,            BASE,       40, 120)
     COMBO(to_mse_layer,      &tog MSE,           RM2 RM3,            BASE,       40, 180, slow-release;)
