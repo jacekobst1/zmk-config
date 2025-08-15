@@ -11,16 +11,16 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: '$$phosphor:regular/command$$'}
+  - {t: A, h: '$$phosphor:regular/control$$'}
   - {t: S, h: '$$phosphor:regular/option$$'}
-  - {t: D, h: '$$phosphor:regular/control$$'}
+  - {t: D, h: '$$phosphor:regular/command$$'}
   - {t: F, h: '$$phosphor:regular/arrow-fat-up$$'}
   - G
   - H
   - {t: J, h: '$$phosphor:regular/arrow-fat-up$$'}
-  - {t: K, h: '$$phosphor:regular/control$$'}
+  - {t: K, h: '$$phosphor:regular/command$$'}
   - {t: L, h: '$$phosphor:regular/option$$'}
-  - {t: ;, h: '$$phosphor:regular/command$$'}
+  - {t: ;, h: '$$phosphor:regular/control$$'}
   - Z
   - X
   - C
@@ -46,18 +46,18 @@ layers:
   - '*'
   - (
   - )
-  - {t: '=', h: '$$phosphor:regular/command$$'}
+  - {t: '|', h: '$$phosphor:regular/control$$'}
   - {t: _, h: '$$phosphor:regular/option$$'}
-  - {t: '{', h: '$$phosphor:regular/control$$'}
+  - {t: '{', h: '$$phosphor:regular/command$$'}
   - {t: '[', h: '$$phosphor:regular/arrow-fat-up$$'}
   - /
   - \
   - {t: ']', h: '$$phosphor:regular/arrow-fat-up$$'}
-  - {t: '}', h: '$$phosphor:regular/control$$'}
+  - {t: '}', h: '$$phosphor:regular/command$$'}
   - {t: '-', h: '$$phosphor:regular/option$$'}
-  - {t: ':', h: '$$phosphor:regular/command$$'}
+  - {t: ':', h: '$$phosphor:regular/control$$'}
   - '~'
-  - '|'
+  - '='
   - '`'
   - ''''
   - '-'
@@ -81,16 +81,16 @@ layers:
   - '8'
   - '9'
   - '0'
-  - {t: Print Scrn, h: '$$phosphor:regular/command$$'}
+  - {t: Print Scrn, h: '$$phosphor:regular/control$$'}
   - {t: ▽, type: trans}
-  - {t: '$$mdi:skip-backward$$', h: '$$phosphor:regular/control$$'}
+  - {t: '$$mdi:skip-backward$$', h: '$$phosphor:regular/command$$'}
   - {t: '$$mdi:play-pause$$', h: '$$phosphor:regular/arrow-fat-up$$'}
   - $$mdi:skip-forward$$
   - ←
   - {t: ↓, h: '$$phosphor:regular/arrow-fat-up$$'}
-  - {t: ↑, h: '$$phosphor:regular/control$$'}
+  - {t: ↑, h: '$$phosphor:regular/command$$'}
   - {t: →, h: '$$phosphor:regular/option$$'}
-  - {t: '$$mdi:volume-high$$', h: '$$phosphor:regular/command$$'}
+  - {t: '$$mdi:volume-high$$', h: '$$phosphor:regular/control$$'}
   - $$mdi:volume-off$$
   - {t: ▽, type: trans}
   - APP
@@ -116,16 +116,16 @@ layers:
   - F8
   - F9
   - F10
-  - $$phosphor:regular/command$$
-  - $$phosphor:regular/option$$
   - $$phosphor:regular/control$$
+  - $$phosphor:regular/option$$
+  - $$phosphor:regular/command$$
   - $$phosphor:regular/arrow-fat-up$$
   - F11
   - F12
   - $$phosphor:regular/arrow-fat-up$$
-  - $$phosphor:regular/control$$
-  - $$phosphor:regular/option$$
   - $$phosphor:regular/command$$
+  - $$phosphor:regular/option$$
+  - $$phosphor:regular/control$$
   - BT 1
   - BT 2
   - BT 3
