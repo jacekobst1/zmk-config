@@ -1,0 +1,2 @@
+#include "hardware_layouts/34-keys.h"
+#include "includes/base.dtsi"

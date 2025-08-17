@@ -6,6 +6,9 @@ manifest:
       # Urchin keeb
     - name: duckyb
       url-base: https://github.com/duckyb
+      # Forager keeb
+    - name: carrefinho
+      url-base: https://github.com/carrefinho
       # Extra module for battery indicator
     - name: caksoylar
       url-base: https://github.com/caksoylar
@@ -16,6 +19,9 @@ manifest:
       import: app/west.yml
     - name: urchin-zmk-module
       remote: duckyb
+      revision: main
+    - name: forager-zmk-module
+      remote: carrefinho
       revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
