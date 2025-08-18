@@ -158,9 +158,9 @@
 // ╭───────────────┬───────────────┬───────────────┬────────────────────┬───────────────╮   ╭───────────────┬────────────────────┬────────────────────┬────────────────────┬────────────────────╮
     &kp EXCL,        &kp AT_SIGN,     &kp HASH,        &kp DLLR,           &kp PRCNT,         &kp CARET,       &kp AMPS,            &kp ASTERISK,          &kp LPAR,             &kp RPAR,      \
 // ├───────────────┼───────────────┼───────────────┼────────────────────┼───────────────┤   ├───────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
-    &hml LCTRL PIPE, &hml LALT UNDER, &hml LGUI LBRC, &hml LSHFT LBKT,    &kp SLASH,          &kp BSLH,        &hmr LSHFT RBKT,    &hmr LGUI RBRC,       &hmr LALT MINUS,     &hmr LCTRL COLON, \
+   &hml LCTRL EQUAL, &hml LALT UNDER, &hml LGUI LBRC, &hml LSHFT LBKT,    &kp SLASH,          &kp BSLH,        &hmr LSHFT RBKT,    &hmr LGUI RBRC,       &hmr LALT MINUS,     &hmr LCTRL COLON, \
 // ├───────────────┼───────────────┼───────────────┼────────────────────┼───────────────┤   ├───────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
-      &kp TILDE,       &kp EQUAL,      &kp GRAVE,       &kp SQT,            &kp MINUS,         &kp PLUS,        &kp DOUBLE_QUOTES,  &kp LESS_THAN,       &kp GREATER_THAN,     &kp QUESTION,    \
+      &kp TILDE,       &kp PIPE,       &kp GRAVE,       &kp SQT,            &kp MINUS,         &kp PLUS,        &kp DOUBLE_QUOTES,  &kp LESS_THAN,       &kp GREATER_THAN,     &kp QUESTION,    \
 // ╰───────────────┴───────────────┴───────────────┼────────────────────┼───────────────┤   ├───────────────┼────────────────────┴────────────────────┴────────────────────┴────────────────────╯
                                        &trans,          &trans,             &trans,              &trans,        &trans,             &trans       \
 //                                 ╰───────────────┴────────────────────┴───────────────╯   ╰───────────────┴────────────────────┴───────────────╯
