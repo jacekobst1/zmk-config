@@ -46,7 +46,7 @@ layers:
   - '*'
   - (
   - )
-  - {t: '|', h: '$$phosphor:regular/control$$'}
+  - {t: '=', h: '$$phosphor:regular/control$$'}
   - {t: _, h: '$$phosphor:regular/option$$'}
   - {t: '{', h: '$$phosphor:regular/command$$'}
   - {t: '[', h: '$$phosphor:regular/arrow-fat-up$$'}
@@ -57,7 +57,7 @@ layers:
   - {t: '-', h: '$$phosphor:regular/option$$'}
   - {t: ':', h: '$$phosphor:regular/control$$'}
   - '~'
-  - '='
+  - '|'
   - '`'
   - ''''
   - '-'
