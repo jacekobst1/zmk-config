@@ -1,4 +1,4 @@
-# ⌨️ 34-Key ZMK Layouts
+# 34-Key Layout using ZMK
 
 | [🦀 Ferris Sweep](https://github.com/davidphilipbarr/Sweep) | [🪸 Urchin](https://github.com/duckyb/urchin) | [Forager](https://github.com/carrefinho/forager) |
 |-------------------------------------------------------------|--------------------------------------------------|--------------------------------------------------|
@@ -7,24 +7,24 @@
 This is my personal [ZMK](https://zmk.dev/) keymap shared across three different 34-key keyboards. It’s drawn using [keymap-drawer](https://github.com/caksoylar/keymap-drawer) and includes configurations for both dongle-based and dongleless setups.
 
 
-## 🛠️ Firmware Builds
+## Firmware Builds
 
-Both keyboards support two connection styles:
+Keyboards support two connection styles:
 
-### 🔌 Dongle Setup
+### Dongle Setup
 
 - `<keyboard_name>_dongle` → Flash to the dongle  
 - `<keyboard_name>_left_peripheral` → Flash to the left half  
 - `<keyboard_name>_right` → Flash to the right half  
 
-### 📶 Dongleless Setup
+### Dongleless Setup
 
 - `<keyboard_name>_left_central` → Flash to the left half (acting as central)  
 - `<keyboard_name>_right` → Flash to the right half  
 
 ---
 
-## 🧠 Layout Philosophy
+## Layout Philosophy
 
 - The layout loosely follows QWERTY conventions — for example, the top row still houses numbers and common symbols.
 - With only 34 keys, space is tight. I prioritize frequently used characters and modifiers close to the home row and thumbs (e.g., `[]{}_-|:`, space, backspace, control, tab).
@@ -32,7 +32,7 @@ Both keyboards support two connection styles:
 
 ---
 
-## 🎯 Key Features
+## Key Features
 
 - **Home-row mods** inspired by [urob’s timeless layout](https://github.com/urob/zmk-config)  
   - Tuned **hold-tap behavior** for reliable mod/tap distinction
@@ -45,11 +45,10 @@ Both keyboards support two connection styles:
   - `SYMBOL`: Symbols and punctuation (top-row behavior)  
   - `NAVIGATION_NUMBER`: Vim-style navigation and number row  
   - `MSE`: Mouse keys and pointer control  
-  - `FUNC`: Bluetooth, bootloader, reset  
-
+  - `FUNC`: Function keys, Bluetooth, keeb settings
 ---
 
-## 🖼️ Layer Map
+## Layer Map
 
 <p align="center">
 <img src="./tools/keymap-drawer/cradio.svg" alt="My personal keymap" width="1024">
@@ -57,7 +56,7 @@ Both keyboards support two connection styles:
 
 ---
 
-## 🙌 Credits
+## Credits
 
 - [urob/zmk-config](https://github.com/urob/zmk-config) — for home-row mod philosophy and layout ideas  
 - [caksoylar/zmk-config](https://github.com/caksoylar/zmk-config) — for layout structure, code inspiration, and keymap-drawer integration  
