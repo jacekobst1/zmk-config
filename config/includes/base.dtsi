@@ -60,7 +60,7 @@
             quick-tap-ms = <155>;
             require-prior-idle-ms = <130>;
             flavor = "balanced";
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-key-positions = <KEYS_R LH0 RH0 RH1>;
             hold-trigger-on-release;
         };
 
@@ -105,7 +105,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <120>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
-            hold-trigger-on-release;
+            //hold-trigger-on-release;
         };
 
         rsm: right_shift_mode {
@@ -118,7 +118,7 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <120>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
-            hold-trigger-on-release;
+            //hold-trigger-on-release;
         };
 
         rst_boot: rst_boot {
