@@ -3,11 +3,11 @@
 | [🦀 Ferris Sweep](https://github.com/davidphilipbarr/Sweep) | [🪸 Urchin](https://github.com/duckyb/urchin) | [🧑‍🚀 Forager](https://github.com/carrefinho/forager) |
 |-------------------------------------------------------------|--------------------------------------------------|--------------------------------------------------------|
 
-This is my personal [ZMK](https://zmk.dev/) keymap shared across three different 34-key keyboards. It’s drawn using [keymap-drawer](https://github.com/caksoylar/keymap-drawer) and includes configurations for both dongle-based and dongleless setups.
+This is my personal [ZMK](https://zmk.dev) keymap shared across three different 34-key keyboards. It’s drawn using [keymap-drawer](https://github.com/caksoylar/keymap-drawer) and includes configurations for both dongle-based and dongleless setups.
 
 ## Layout Philosophy
 
-This layout is highly inspired by [manna-harbour/miryoku](https://github.com/manna-harbour/miryoku).
+This layout is highly inspired by [miryoku](https://github.com/manna-harbour/miryoku).
 
 I don't stick to the "always use both hands" philosophy, as sometimes I find it more efficient/comfortable to use only one hand for things like:
 - use media keys
@@ -88,5 +88,6 @@ This will install a pre-commit hook that:
 
 ## Credits
 
-- [MSmaili/zmk-config](https://github.com/MSmaili/zmk-config) and [caksoylar/zmk-config](https://github.com/caksoylar/zmk-config) - for many-keebs-in-1 repository inspiration with automatic keymap generation 
-- [manna-harbour/miryoku](https://github.com/manna-harbour/miryoku) — for home-row mod philosophy and layout ideas  
+- [manna-harbour](https://github.com/manna-harbour/miryoku) — for layout inspiration
+- [precondition](https://github.com/precondition) - for [A guide to home row mods](https://precondition.github.io/home-row-mods)
+- [caksoylar](https://github.com/caksoylar/zmk-config) and [MSmaili](https://github.com/MSmaili/zmk-config) - for the idea of repository that has one keymap shared across different keyboards and automatic visualization 
