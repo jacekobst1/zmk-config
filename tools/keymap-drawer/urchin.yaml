@@ -1,200 +1,123 @@
 layout: {zmk_keyboard: urchin}
 layers:
-  BASE:
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: A, h: '$$phosphor:regular/control$$'}
-  - {t: S, h: '$$phosphor:regular/option$$'}
-  - {t: D, h: '$$phosphor:regular/command$$'}
-  - {t: F, h: '$$phosphor:regular/arrow-fat-up$$'}
-  - G
-  - H
-  - {t: J, h: '$$phosphor:regular/arrow-fat-up$$'}
-  - {t: K, h: '$$phosphor:regular/command$$'}
-  - {t: L, h: '$$phosphor:regular/option$$'}
-  - {t: ;, h: '$$phosphor:regular/control$$'}
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - N
-  - M
-  - ','
-  - .
-  - /
-  - {t: '$$mdi:keyboard-space$$', h: SYM}
-  - {t: ↹, h: '$$phosphor:regular/control$$'}
-  - {t: ⏎, h: '$$phosphor:regular/arrow-fat-up$$'}
-  - {t: '$$phosphor:regular/backspace$$', h: NAV}
-  SYM:
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - {t: '=', h: '$$phosphor:regular/control$$'}
-  - {t: _, h: '$$phosphor:regular/option$$'}
-  - {t: '{', h: '$$phosphor:regular/command$$'}
-  - {t: '[', h: '$$phosphor:regular/arrow-fat-up$$'}
-  - /
-  - \
-  - {t: ']', h: '$$phosphor:regular/arrow-fat-up$$'}
-  - {t: '}', h: '$$phosphor:regular/command$$'}
-  - {t: '-', h: '$$phosphor:regular/option$$'}
-  - {t: ':', h: '$$phosphor:regular/control$$'}
-  - '~'
-  - '|'
-  - '`'
-  - ''''
-  - '-'
-  - +
-  - '"'
-  - <
-  - '>'
-  - '?'
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  NAV:
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - {t: Print Scrn, h: '$$phosphor:regular/control$$'}
-  - {t: ▽, type: trans}
-  - {t: '$$mdi:skip-backward$$', h: '$$phosphor:regular/command$$'}
-  - {t: '$$mdi:play-pause$$', h: '$$phosphor:regular/arrow-fat-up$$'}
-  - $$mdi:skip-forward$$
-  - ←
-  - {t: ↓, h: '$$phosphor:regular/arrow-fat-up$$'}
-  - {t: ↑, h: '$$phosphor:regular/command$$'}
-  - {t: →, h: '$$phosphor:regular/option$$'}
-  - {t: '$$mdi:volume-high$$', h: '$$phosphor:regular/control$$'}
-  - $$mdi:volume-off$$
-  - {t: ▽, type: trans}
-  - APP
-  - PgUp
-  - Home
-  - End
-  - PgDwn
-  - ','
-  - .
-  - $$mdi:volume-medium$$
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  FNC:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - $$phosphor:regular/control$$
-  - $$phosphor:regular/option$$
-  - $$phosphor:regular/command$$
-  - $$phosphor:regular/arrow-fat-up$$
-  - F11
-  - F12
-  - $$phosphor:regular/arrow-fat-up$$
-  - $$phosphor:regular/command$$
-  - $$phosphor:regular/option$$
-  - $$phosphor:regular/control$$
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
-  - {t: Reset, h: Boot}
-  - {t: Reset, h: Boot}
-  - Studio Unlock
-  - Out USB
-  - Out BT
-  - BT Clear
-  - {type: held}
-  - ''
-  - ''
-  - {type: held}
-  MSE: ['', Back Click, Middle Click, Forward Click, '', '', Scroll ↑, Mouse ↑, '', '', Scroll ←, '$$phosphor:regular/mouse-left-click$$', Scroll ↓, '$$phosphor:regular/mouse-right-click$$',
-    Scroll →, '', Mouse ←, Mouse ↓, Mouse →, '', '', '', '', '', '', '', '', '', '', '', Toggle MSE, '$$phosphor:regular/mouse-left-click$$', '$$phosphor:regular/mouse-right-click$$',
-    Toggle MSE]
+  Base:
+  - [Q, W, E, R, T, Y, U, I, O, P]
+  - - {t: A, h: LCTRL}
+    - {t: S, h: LALT}
+    - {t: D, h: LMETA}
+    - {t: F, h: LSHIFT}
+    - G
+    - H
+    - {t: J, h: LSHFT}
+    - {t: K, h: LMETA}
+    - {t: L, h: LALT}
+    - {t: ;, h: LCTRL}
+  - [Z, X, C, V, B, N, M, ',', ., /]
+  - - {t: SPACE, h: Nav}
+    - {t: TAB, h: AppNav}
+    - {t: ENTER, h: LMs+Med}
+    - {t: BSPC, h: Num}
+  Num:
+  - ['[', '7', '8', '9', ']', '', '&ThickArrow', '', '&ThinArrow', '']
+  - ['''', '4', '5', '6', '=', '', LSHFT, LGUI, LALT, LCTRL]
+  - - '`'
+    - '1'
+    - '2'
+    - '3'
+    - \
+    - ''
+    - ''
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - '0'
+    - '-'
+    - ''
+    - {type: held}
+  Nav:
+  - ['', '', '', '', '', '', CAPSLOCK, '&caps_word', INS, '']
+  - [LCTRL, LALT, LMETA, LSHIFT, '', '', LEFT, DOWN, UP, RIGHT]
+  - [Gui+Z, Gui+X, Gui+C, Gui+V, Gui+B, '', Gui+LEFT, PG DN, PG UP, Gui+RIGHT]
+  - - {type: held}
+    - ''
+    - ENTER
+    - BACKSPACE
+  LMs+Med:
+  - ['', 'Gui+[', '&mmv MOVE_UP', 'Gui+]', '&msc SCRL_UP', '', '', '', '', '']
+  - ['', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_RIGHT', '&msc SCRL_DOWN', MUTE, LSHFT, LGUI, LALT, LCTRL]
+  - ['', '', '', '', '&mkp MCLK', PLAY PAUSE, PREV, VOL DN, VOL UP, NEXT]
+  - - '&mkp LCLK'
+    - '&mkp RCLK'
+    - {type: held}
+    - '&bootloader'
+  AppNav:
+  - - ''
+    - {t: '&Cmd7', h: Ctl+7}
+    - {t: '&Cmd8', h: Ctl+8}
+    - {t: '&Cmd9', h: Ctl+9}
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - {t: '&Cmd4', h: Ctl+4}
+    - {t: '&Cmd5', h: Ctl+5}
+    - {t: '&Cmd6', h: Ctl+6}
+    - ''
+    - ''
+    - Sft+Gui+[
+    - Gui+[
+    - Gui+]
+    - Sft+Gui+]
+  - - Gui+`
+    - {t: '&Cmd1', h: Ctl+1}
+    - {t: '&Cmd2', h: Ctl+2}
+    - {t: '&Cmd3', h: Ctl+3}
+    - {t: LSHIFT, h: sticky}
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - '&bootloader'
+    - {type: held}
+    - RET
+    - BSPC
+  Fun:
+  - [F12, F7, F8, F9, '', '', '', '', '', '']
+  - [F11, F4, F5, F6, '', '', LSHFT, LGUI, LALT, LCTRL]
+  - - F10
+    - F1
+    - F2
+    - F3
+    - ''
+    - ''
+    - {t: BT, h: '0'}
+    - {t: BT, h: '1'}
+    - {t: BT, h: '2'}
+    - ''
+  - - {type: held}
+    - ''
+    - BT CLR ALL
+    - {type: held}
+  RMs:
+  - ['', '', '', '', '', '&msc SCRL_UP', 'Gui+[', '&mmv MOVE_UP', 'Gui+]', '']
+  - ['', '', '', '', '', '&msc SCRL_DOWN', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_RIGHT', '']
+  - ['', '', '', '', '', '&mkp MCLK', '', '', '', '']
+  - ['', '', '&mkp LCLK', '&mkp RCLK']
 combos:
-- p: [12, 13]
-  k: Delete
-  l: [BASE]
-- p: [21, 22]
-  k: Copy
-  l: [BASE]
 - p: [22, 23]
-  k: Paste
-  l: [BASE]
-- p: [6, 7, 8]
-  k: Scroll ↑
-  l: [BASE, MSE]
-  a: top
-  o: 0.4
-- p: [16, 17]
-  k: Esc
-  l: [BASE]
-- p: [10, 11, 12]
-  k: ⏎
-  l: [BASE]
-  draw_separate: true
-- p: [12, 13, 16, 17]
-  k: Caps Word
-  l: [BASE]
-  draw_separate: true
-- p: [21, 23]
-  k: Cut
-  l: [BASE]
-  a: bottom
-  o: 0.2
-- p: [17, 18]
-  k: {t: MSE, h: toggle}
-  l: [BASE]
-- p: [26, 27, 28]
-  k: Scroll ↓
-  l: [BASE, MSE]
-  a: bottom
-  o: 0.2
-- p: [0, 1]
-  k: Esc
-  l: [BASE]
-- p: [14, 15]
-  k: Soft Off
-  l: [FNC]
-- p: [2, 7]
-  k: Show Batt
-  l: [FNC]
-  a: top
-  o: 1.0
-- p: [3, 6]
-  k: Show Conn
-  l: [FNC]
-  a: top
-  o: 0.5
+  k: ESC
+- p: [26, 27]
+  k: DEL
+- p: [21, 22]
+  k: {t: LMs+Med, h: toggle}
+  l: [Base, LMs+Med]
+- p: [27, 28]
+  k: {t: RMs, h: toggle}
+  l: [Base, RMs]
+- p: [33, 30]
+  k: Fun
+  l: [Base, LMs+Med, Fun, RMs]
