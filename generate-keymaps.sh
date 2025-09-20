@@ -85,7 +85,7 @@ main() {
 
         # Generate SVG file
         print_status "  Drawing $yaml_file -> $svg_file"
-        if keymap draw "$yaml_file" > "$svg_file" 2>/dev/null; then
+        if keymap -c keymap-drawer/config.yaml draw "$yaml_file" > "$svg_file" 2>/dev/null; then
             print_success "  Generated $svg_file"
             ((success_count++))
         else
