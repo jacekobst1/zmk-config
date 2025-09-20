@@ -290,7 +290,7 @@
 &kp Q             &kp W            &kp E             &kp R              &kp T        &kp Y        &kp U             &kp I             &kp O            &kp P
 &hrml_ht LCTRL A  &hrml_ht LALT S  &hrml_ht LMETA D  &hrml_ht LSHIFT F  &kp G        &kp H        &hrmr_ht LSHFT J  &hrmr_ht LMETA K  &hrmr_ht LALT L  &hrmr_ht LCTRL SEMI
 &kp Z             &kp X            &kp C             &kp V              &kp B        &kp N        &kp M             &kp COMMA         &kp DOT          &kp SLASH
-                                                     &lt 2 SPACE        &lt 4 TAB    &lt 3 ENTER  &lt 1 BSPC
+                                                     &lt 2 SPACE        &lt 4 TAB    &lt 3 ENTER  &lt 1 BACKSPACE
             >;
         };
 
@@ -323,10 +323,10 @@
 
         AppNav {
             bindings = <
-&none          &macro_ht7 LC(N7) 0               &macro_ht8 LC(N8) 0   &macro_ht9 LC(N9) 0   &none         &none    &none             &none         &none         &none
-&none          &macro_ht4 LC(N4) 0               &macro_ht5 LC(N5) 0   &macro_ht6 LC(N6) 0   &none         &none    &kp LS(LG(LBKT))  &kp LG(LBKT)  &kp LG(RBKT)  &kp LS(LG(RBKT))
-&kp LG(GRAVE)  &macro_ht1 LC(NUMBER_1) 0         &macro_ht2 LC(N2) 0   &macro_ht3 LC(N3) 0   &sk LSHIFT    &none    &none             &none         &none         &none
-                                                                       &bootloader           &trans        &kp RET  &kp BSPC
+&none          &macro_ht7 LC(N7) 0               &macro_ht8 LC(N8) 0   &macro_ht9 LC(N9) 0   &none         &none      &none             &none         &none         &none
+&none          &macro_ht4 LC(N4) 0               &macro_ht5 LC(N5) 0   &macro_ht6 LC(N6) 0   &none         &none      &kp LS(LG(LBKT))  &kp LG(LBKT)  &kp LG(RBKT)  &kp LS(LG(RBKT))
+&kp LG(GRAVE)  &macro_ht1 LC(NUMBER_1) 0         &macro_ht2 LC(N2) 0   &macro_ht3 LC(N3) 0   &sk LSHIFT    &none      &none             &none         &none         &none
+                                                                       &bootloader           &trans        &kp ENTER  &kp BACKSPACE
             >;
         };
 

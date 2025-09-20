@@ -16,7 +16,7 @@ layers:
   - - {t: SPACE, h: Nav}
     - {t: TAB, h: AppNav}
     - {t: ENTER, h: LMs+Med}
-    - {t: BSPC, h: Num}
+    - {t: BACKSPACE, h: Num}
   Num:
   - ['[', '7', '8', '9', ']', '', '&ThickArrow', '', '&ThinArrow', '']
   - ['''', '4', '5', '6', '=', '', LSHFT, LGUI, LALT, LCTRL]
@@ -83,8 +83,8 @@ layers:
     - ''
   - - '&bootloader'
     - {type: held}
-    - RET
-    - BSPC
+    - ENTER
+    - BACKSPACE
   Fun:
   - [F12, F7, F8, F9, '', '', '', '', '', '']
   - [F11, F4, F5, F6, '', '', LSHFT, LGUI, LALT, LCTRL]
