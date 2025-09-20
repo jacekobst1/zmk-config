@@ -10,11 +10,9 @@ This is my personal [ZMK](https://zmk.dev) keymap shared across three different 
 This layout is highly inspired by [miryoku](https://github.com/manna-harbour/miryoku).
 
 I don't stick to the "always use both hands" philosophy, as sometimes I find it more efficient/comfortable to use only one hand for things like:
-- use media keys
 - switch the apps
+- control the media
 - control the mouse
-
----
 
 ## Key Features
 
@@ -35,15 +33,11 @@ I don't stick to the "always use both hands" philosophy, as sometimes I find it 
 - **Macros for programming in PHP**
     - ThickArrow: `=>`
     - ThinArrow: `->`
----
-
 ## Layer Map
 
 <p align="center">
 <img src="./keymap-drawer/cradio.svg" alt="My personal keymap" width="1024">
 </p>
-
----
 
 ## Firmware Builds
 
@@ -59,8 +53,6 @@ Keyboards support two connection styles:
 
 - `<keyboard_name>_left_central` → Flash to the left half (acting as central)
 - `<keyboard_name>_right` → Flash to the right half
-
----
 
 ## Git Hooks - Automatic Keymap Visualization
 
@@ -83,8 +75,6 @@ This will install a pre-commit hook that:
 ### Requirements
 
 - [keymap-drawer](https://github.com/caksoylar/keymap-drawer) installed: `pip install keymap-drawer`
-
----
 
 ## Credits
 
