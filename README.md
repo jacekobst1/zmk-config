@@ -51,7 +51,7 @@ Keyboards support two connection styles:
 ## Layer Map
 
 <p align="center">
-<img src="./tools/keymap-drawer/cradio.svg" alt="My personal keymap" width="1024">
+<img src="./keymap-drawer/cradio.svg" alt="My personal keymap" width="1024">
 </p>
 
 ---

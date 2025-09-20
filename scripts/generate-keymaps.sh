@@ -46,7 +46,7 @@ main() {
     check_dependencies
 
     # Ensure output directory exists
-    mkdir -p tools/keymap-drawer
+    mkdir -p keymap-drawer
 
     # Find all .keymap files in config directory
     keymap_files=(config/*.keymap)
@@ -70,8 +70,8 @@ main() {
         print_status "Processing $base_name..."
 
         # Define output files
-        yaml_file="tools/keymap-drawer/${base_name}.yaml"
-        svg_file="tools/keymap-drawer/${base_name}.svg"
+        yaml_file="keymap-drawer/${base_name}.yaml"
+        svg_file="keymap-drawer/${base_name}.svg"
 
         # Generate YAML file
         print_status "  Parsing $keymap_file -> $yaml_file"
