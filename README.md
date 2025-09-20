@@ -56,6 +56,41 @@ Keyboards support two connection styles:
 
 ---
 
+## Git Hooks - Automatic Keymap Generation
+
+This repository includes git hooks that automatically generate keymap visualization files when you commit changes to `.keymap` files.
+
+### One-Time Setup
+
+To enable automatic keymap generation for your local development:
+
+```bash
+# Run the installation script
+./hooks/install-hooks.sh
+```
+
+This will install a pre-commit hook that:
+- Detects changes to any files in the `config/` directory
+- Automatically runs `./generate-keymaps.sh`
+- Adds generated files (`keymap-drawer/*.yaml` and `keymap-drawer/*.svg`) to your commit
+- Blocks the commit if keymap generation fails
+
+### Bypassing the Hook
+
+If you need to commit without running keymap generation (e.g., for debugging):
+
+```bash
+git commit --no-verify -m "your commit message"
+```
+
+### Requirements
+
+The git hook requires:
+- [keymap-drawer](https://github.com/caksoylar/keymap-drawer) installed: `pip install keymap-drawer`
+- The `./generate-keymaps.sh` script to be present and executable
+
+---
+
 ## Credits
 
 - [urob/zmk-config](https://github.com/urob/zmk-config) — for home-row mod philosophy and layout ideas  

@@ -1,0 +1,79 @@
+#!/bin/bash
+
+# Pre-commit hook to automatically generate keymap files
+# This hook runs generate-keymaps.sh when any files in config/ are modified
+
+set -e
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+print_info() {
+    echo -e "${BLUE}[HOOK]${NC} $1"
+}
+
+print_success() {
+    echo -e "${GREEN}[HOOK]${NC} $1"
+}
+
+print_warning() {
+    echo -e "${YELLOW}[HOOK]${NC} $1"
+}
+
+print_error() {
+    echo -e "${RED}[HOOK]${NC} $1"
+}
+
+# Check if any files in config/ directory are staged for commit
+config_files_changed() {
+    git diff --cached --name-only | grep -q "^config/"
+}
+
+# Main hook logic
+main() {
+    print_info "Pre-commit hook: Checking for config changes..."
+
+    # Check if any config files are being committed
+    if ! config_files_changed; then
+        print_info "No config files changed, skipping keymap generation"
+        exit 0
+    fi
+
+    print_info "Config changes detected in commit, generating keymap files..."
+
+    # Check if generate-keymaps.sh exists
+    if [ ! -f "./generate-keymaps.sh" ]; then
+        print_error "generate-keymaps.sh not found in project root"
+        print_error "Make sure the script exists and is executable"
+        exit 1
+    fi
+
+    # Run the keymap generation script
+    if ! ./generate-keymaps.sh; then
+        print_error "Keymap generation failed!"
+        print_error "Please fix the errors and try committing again"
+        exit 1
+    fi
+
+    # Check if any new files were generated
+    if git status --porcelain | grep -q "^?? keymap-drawer/"; then
+        print_info "New keymap files generated, adding to commit..."
+        git add keymap-drawer/
+    fi
+
+    # Check if any existing files were modified
+    if git status --porcelain | grep -q "^ M keymap-drawer/"; then
+        print_info "Keymap files updated, adding changes to commit..."
+        git add keymap-drawer/
+    fi
+
+    print_success "Keymap generation completed successfully!"
+    print_info "Generated files have been added to your commit"
+}
+
+# Run the hook
+main "$@"
