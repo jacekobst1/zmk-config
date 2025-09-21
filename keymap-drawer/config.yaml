@@ -167,7 +167,7 @@ draw_config:
     use.phosphor\:regular\/control {
       color: #cdd6f4
     }
-  footer_text: <a href="https://github.com/MuhametSmaili/zmk-config">MuhametSmaili/zmk-config</a>
+  footer_text: <a href="https://github.com/jacekobst1/zmk-config">jacekobst1/zmk-config</a>
   shrink_wide_legends: 7
   style_layer_activators: true
   glyph_tap_size: 14
