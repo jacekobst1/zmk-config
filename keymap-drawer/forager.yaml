@@ -99,7 +99,7 @@ layers:
     - {t: BT, h: '2'}
     - ''
   - - {type: held}
-    - ''
+    - '&studio_unlock'
     - BT CLR ALL
     - {type: held}
   RMs:
