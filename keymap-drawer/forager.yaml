@@ -52,9 +52,9 @@ layers:
     - '&bootloader'
   AppNav:
   - - ''
-    - {t: '&Cmd7', h: Ctl+7}
-    - {t: '&Cmd8', h: Ctl+8}
-    - {t: '&Cmd9', h: Ctl+9}
+    - {t: Gui+7, h: Ctl+7}
+    - {t: Gui+8, h: Ctl+8}
+    - {t: Gui+9, h: Ctl+9}
     - ''
     - ''
     - ''
@@ -62,9 +62,9 @@ layers:
     - ''
     - ''
   - - ''
-    - {t: '&Cmd4', h: Ctl+4}
-    - {t: '&Cmd5', h: Ctl+5}
-    - {t: '&Cmd6', h: Ctl+6}
+    - {t: Gui+4, h: Ctl+4}
+    - {t: Gui+5, h: Ctl+5}
+    - {t: Gui+6, h: Ctl+6}
     - ''
     - ''
     - Sft+Gui+[
@@ -72,9 +72,9 @@ layers:
     - Gui+]
     - Sft+Gui+]
   - - Gui+`
-    - {t: '&Cmd1', h: Ctl+1}
-    - {t: '&Cmd2', h: Ctl+2}
-    - {t: '&Cmd3', h: Ctl+3}
+    - {t: Gui+1, h: Ctl+1}
+    - {t: Gui+2, h: Ctl+2}
+    - {t: Gui+3, h: Ctl+3}
     - {t: LSHIFT, h: sticky}
     - ''
     - ''

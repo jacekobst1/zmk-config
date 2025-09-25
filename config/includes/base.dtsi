@@ -190,96 +190,6 @@
             tapping-term-ms = <160>;
             flavor = "tap-preferred";
         };
-
-        macro_ht1: macro_hold_tap1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Macro hold tap 1";
-            bindings = <&kp>, <&Cmd1>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            flavor = "tap-preferred";
-        };
-
-        macro_ht2: macro_hold_tap2 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Macro hold tap 2";
-            bindings = <&kp>, <&Cmd2>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            flavor = "tap-preferred";
-        };
-
-        macro_ht3: macro_hold_tap3 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Macro hold tap 3";
-            bindings = <&kp>, <&Cmd3>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            flavor = "tap-preferred";
-        };
-
-        macro_ht4: macro_hold_tap4 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Macro hold tap 4";
-            bindings = <&kp>, <&Cmd4>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            flavor = "tap-preferred";
-        };
-
-        macro_ht5: macro_hold_tap5 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Macro hold tap 5";
-            bindings = <&kp>, <&Cmd5>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            flavor = "tap-preferred";
-        };
-
-        macro_ht6: macro_hold_tap6 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Macro hold tap 6";
-            bindings = <&kp>, <&Cmd6>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            flavor = "tap-preferred";
-        };
-
-        macro_ht7: macro_hold_tap7 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Macro hold tap 7";
-            bindings = <&kp>, <&Cmd7>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            flavor = "tap-preferred";
-        };
-
-        macro_ht8: macro_hold_tap8 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Macro hold tap 8";
-            bindings = <&kp>, <&Cmd8>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            flavor = "tap-preferred";
-        };
-
-        macro_ht9: macro_hold_tap9 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Macro hold tap 9";
-            bindings = <&kp>, <&Cmd9>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            flavor = "tap-preferred";
-        };
     };
 
     keymap {
@@ -344,11 +254,11 @@
         AppNav {
             bindings = <
 // ┌───────────────────────┬───────────────────────┬───────────────────────┬───────────────────────┬───────────────────────┐    ┌───────────────────────┬───────────────────────┬───────────────────────┬───────────────────────┬───────────────────────┐
-     &none                   &macro_ht7 LC(N7) 0     &macro_ht8 LC(N8) 0     &macro_ht9 LC(N9) 0     &none                        &none                   &none                   &none                   &none                   &none
+     &none                   &an_ht LC(N7) LG(N7)    &an_ht LC(N8) LG(N8)    &an_ht LC(N9) LG(N9)     &none                        &none                   &none                   &none                   &none                   &none
 // ├───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┤    ├───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┤
-     &none                   &macro_ht4 LC(N4) 0     &macro_ht5 LC(N5) 0     &macro_ht6 LC(N6) 0     &none                        &none                   &kp LS(LG(LBKT))        &kp LG(LBKT)            &kp LG(RBKT)            &kp LS(LG(RBKT))
+     &none                   &an_ht LC(N4) LG(N4)    &an_ht LC(N5) LG(N5)    &an_ht LC(N6) LG(N6)     &none                        &none                   &kp LS(LG(LBKT))        &kp LG(LBKT)            &kp LG(RBKT)            &kp LS(LG(RBKT))
 // ├───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┤    ├───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┤
-     &kp LG(GRAVE)           &macro_ht1 LC(N1) 0     &macro_ht2 LC(N2) 0     &macro_ht3 LC(N3) 0     &sk LSHIFT                   &none                   &none                   &none                   &none                   &none
+     &kp LG(GRAVE)           &an_ht LC(N1) LG(N1)    &an_ht LC(N2) LG(N2)    &an_ht LC(N3) LG(N3)     &sk LSHIFT                   &none                   &none                   &none                   &none                   &none
 // └───────────────────────┴───────────────────────┴───────────────────────┼───────────────────────┼───────────────────────┤    ├───────────────────────┼───────────────────────┼───────────────────────┴───────────────────────┴───────────────────────┘
                                                                              &bootloader             &trans                       &kp ENTER               &kp BACKSPACE
 //                                                                         └───────────────────────┴───────────────────────┘    └───────────────────────┴───────────────────────┘
