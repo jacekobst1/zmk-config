@@ -202,7 +202,7 @@
 
         con_boot_td: con_boot_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "Battery/Bootloader tap dance";
+            label = "Connection/Bootloader tap dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&ind_con>, <&bootloader>;
