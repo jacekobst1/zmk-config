@@ -49,7 +49,7 @@ layers:
   - - '&mkp LCLK'
     - '&mkp RCLK'
     - {type: held}
-    - '&bootloader'
+    - '&bat_boot_td'
   AppNav:
   - - ''
     - {t: Gui+7, h: Ctl+7}
@@ -81,7 +81,7 @@ layers:
     - ''
     - ''
     - ''
-  - - '&bootloader'
+  - - '&bat_boot_td'
     - {type: held}
     - ENTER
     - BACKSPACE
