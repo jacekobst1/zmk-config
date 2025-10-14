@@ -49,7 +49,7 @@ layers:
   - - '&mkp LCLK'
     - '&mkp RCLK'
     - {type: held}
-    - '&bat_boot_td'
+    - '&con_boot_td'
   AppNav:
   - - ''
     - {t: Gui+7, h: Ctl+7}
