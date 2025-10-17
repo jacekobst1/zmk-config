@@ -152,6 +152,10 @@
     };
 
     behaviors {
+        caps_word {
+            continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>;
+        };
+
         hrml_ht: hrm_left_ht {
             compatible = "zmk,behavior-hold-tap";
             label = "Home row mods left hold tap";
