@@ -23,6 +23,9 @@ manifest:
     - name: forager-zmk-module
       remote: carrefinho
       revision: main
+    - name: prospector-zmk-module
+      remote: carrefinho
+      revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
