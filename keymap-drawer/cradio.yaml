@@ -14,8 +14,8 @@ layers:
     - {t: ;, h: LCTRL}
   - [Z, X, C, V, B, N, M, ',', ., /]
   - - {t: SPACE, h: Nav}
-    - {t: TAB, h: AppNav}
-    - {t: ENTER, h: LMs+Med}
+    - {t: TAB, h: App nav}
+    - {t: ENTER, h: Mouse}
     - {t: BACKSPACE, h: Num}
   Num:
   - ['[', '7', '8', '9', ']', '', '&ThickArrow', '', '&ThinArrow', '']
@@ -42,7 +42,7 @@ layers:
     - ''
     - ENTER
     - BACKSPACE
-  LMs+Med:
+  Mouse:
   - ['', 'Gui+[', '&mmv MOVE_UP', 'Gui+]', '&msc SCRL_UP', '', '', '', '', '']
   - ['', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_RIGHT', '&msc SCRL_DOWN', MUTE, LSHFT, LGUI, LALT, LCTRL]
   - ['', '', '', '', '&mkp MCLK', PLAY PAUSE, PREV, VOL DN, VOL UP, NEXT]
@@ -50,7 +50,7 @@ layers:
     - '&mkp RCLK'
     - {type: held}
     - '&con_sys_boot_td'
-  AppNav:
+  App nav:
   - - ''
     - {t: Gui+7, h: Ctl+7}
     - {t: Gui+8, h: Ctl+8}
@@ -102,7 +102,7 @@ layers:
     - '&studio_unlock'
     - BT CLR ALL
     - {type: held}
-  RMs:
+  RMouse:
   - ['', '', '', '', '', '&msc SCRL_UP', 'Gui+[', '&mmv MOVE_UP', 'Gui+]', '']
   - ['', '', '', '', '', '&msc SCRL_DOWN', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_RIGHT', '']
   - ['', '', '', '', '', '&mkp MCLK', '', '', '', '']
@@ -113,11 +113,11 @@ combos:
 - p: [26, 27]
   k: DEL
 - p: [21, 22]
-  k: {t: LMs+Med, h: toggle}
-  l: [Base, LMs+Med]
+  k: {t: Mouse, h: toggle}
+  l: [Base, Mouse]
 - p: [27, 28]
-  k: {t: RMs, h: toggle}
-  l: [Base, RMs]
+  k: {t: RMouse, h: toggle}
+  l: [Base, RMouse]
 - p: [33, 30]
   k: Fun
-  l: [Base, LMs+Med, Fun, RMs]
+  l: [Base, Mouse, Fun, RMouse]

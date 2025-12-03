@@ -411,14 +411,14 @@ use.phosphor\:regular\/control {
 <g transform="translate(319, 276) rotate(25.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">TAB</text>
-<a href="#AppNav">
-<text x="0" y="26" class="key hold layer-activator">AppNav</text>
+<a href="#App-nav">
+<text x="0" y="26" class="key hold layer-activator">App nav</text>
 </a></g>
 <g transform="translate(431, 276) rotate(-25.0)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 <text x="0" y="0" class="key tap">ENTER</text>
-<a href="#LMsMed">
-<text x="0" y="26" class="key hold layer-activator">LMs+Med</text>
+<a href="#Mouse">
+<text x="0" y="26" class="key hold layer-activator">Mouse</text>
 </a></g>
 <g transform="translate(480, 240) rotate(-25.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -436,14 +436,14 @@ use.phosphor\:regular\/control {
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="106" y="144" width="28" height="28" class="combo"/>
-<a href="#LMsMed">
-<text x="120" y="158" class="combo tap layer-activator">LMs+Med</text>
+<a href="#Mouse">
+<text x="120" y="158" class="combo tap layer-activator">Mouse</text>
 </a><text x="120" y="170" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="616" y="144" width="28" height="28" class="combo"/>
-<a href="#RMs">
-<text x="630" y="158" class="combo tap layer-activator">RMs</text>
+<a href="#RMouse">
+<text x="630" y="158" class="combo tap layer-activator">RMouse</text>
 </a><text x="630" y="170" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
@@ -741,8 +741,8 @@ use.phosphor\:regular\/control {
 </g>
 </g>
 </g>
-<g transform="translate(30, 1128)" class="layer-LMs+Med">
-<text x="0" y="30" class="label" id="LMsMed">LMs+Med:</text>
+<g transform="translate(30, 1128)" class="layer-Mouse">
+<text x="0" y="30" class="label" id="Mouse">Mouse:</text>
 <g transform="translate(0, 60)">
 <g transform="translate(30, 67)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -902,8 +902,8 @@ use.phosphor\:regular\/control {
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="106" y="144" width="28" height="28" class="combo"/>
-<a href="#LMsMed">
-<text x="120" y="158" class="combo tap layer-activator">LMs+Med</text>
+<a href="#Mouse">
+<text x="120" y="158" class="combo tap layer-activator">Mouse</text>
 </a><text x="120" y="170" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-3">
@@ -915,8 +915,8 @@ use.phosphor\:regular\/control {
 </a></g>
 </g>
 </g>
-<g transform="translate(30, 1504)" class="layer-AppNav">
-<text x="0" y="30" class="label" id="AppNav">AppNav:</text>
+<g transform="translate(30, 1504)" class="layer-App nav">
+<text x="0" y="30" class="label" id="App-nav">App nav:</text>
 <g transform="translate(0, 60)">
 <g transform="translate(30, 67)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1210,8 +1210,8 @@ use.phosphor\:regular\/control {
 </a></g>
 </g>
 </g>
-<g transform="translate(30, 2257)" class="layer-RMs">
-<text x="0" y="30" class="label" id="RMs">RMs:</text>
+<g transform="translate(30, 2257)" class="layer-RMouse">
+<text x="0" y="30" class="label" id="RMouse">RMouse:</text>
 <g transform="translate(0, 60)">
 <g transform="translate(30, 67)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
@@ -1354,8 +1354,8 @@ use.phosphor\:regular\/control {
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="616" y="144" width="28" height="28" class="combo"/>
-<a href="#RMs">
-<text x="630" y="158" class="combo tap layer-activator">RMs</text>
+<a href="#RMouse">
+<text x="630" y="158" class="combo tap layer-activator">RMouse</text>
 </a><text x="630" y="170" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-3">
