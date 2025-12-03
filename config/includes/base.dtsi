@@ -196,20 +196,20 @@
             flavor = "tap-preferred";
         };
 
-        bat_boot_td: bat_boot_td {
+        bat_sys_boot_td: bat_sys_boot_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "Battery/Bootloader tap dance";
+            label = "Battery/Reset/Bootloader tap dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&ind_bat>, <&bootloader>;
+            bindings = <&ind_bat>, <&sys_reset>, <&bootloader>;
         };
 
-        con_boot_td: con_boot_td {
+        con_sys_boot_td: con_sys_boot_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "Connection/Bootloader tap dance";
+            label = "Connection/Reset/Bootloader tap dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&ind_con>, <&bootloader>;
+            bindings = <&ind_con>, <&sys_reset>, <&bootloader>;
         };
     };
 
@@ -271,7 +271,7 @@
 // ├───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┤    ├───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┤
      &none                   &none                   &none                   &none                   &mkp MCLK                    &kp C_PLAY_PAUSE        &kp C_PREV              &kp C_VOL_DN            &kp C_VOL_UP            &kp C_NEXT
 // └───────────────────────┴───────────────────────┴───────────────────────┼───────────────────────┼───────────────────────┤    ├───────────────────────┼───────────────────────┼───────────────────────┴───────────────────────┴───────────────────────┘
-                                                                             &mkp LCLK               &mkp RCLK                    &trans                  &con_boot_td
+                                                                             &mkp LCLK               &mkp RCLK                    &trans                  &con_sys_boot_td
 //                                                                         └───────────────────────┴───────────────────────┘    └───────────────────────┴───────────────────────┘
             >;
         };
@@ -286,7 +286,7 @@
 // ├───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┤    ├───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┼───────────────────────┤
      &kp LG(GRAVE)           &an_ht LC(N1) LG(N1)    &an_ht LC(N2) LG(N2)    &an_ht LC(N3) LG(N3)     &sk LSHIFT                   &none                   &none                   &none                   &none                   &none
 // └───────────────────────┴───────────────────────┴───────────────────────┼───────────────────────┼───────────────────────┤    ├───────────────────────┼───────────────────────┼───────────────────────┴───────────────────────┴───────────────────────┘
-                                                                             &bat_boot_td             &trans                       &kp ENTER               &kp BACKSPACE
+                                                                             &bat_sys_boot_td         &trans                       &kp ENTER               &kp BACKSPACE
 //                                                                         └───────────────────────┴───────────────────────┘    └───────────────────────┴───────────────────────┘
             >;
         };
