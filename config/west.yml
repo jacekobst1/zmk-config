@@ -12,6 +12,9 @@ manifest:
       # Extra module for battery indicator
     - name: caksoylar
       url-base: https://github.com/caksoylar
+      # Dongle screen module
+    - name: janpfischer
+      url-base: https://github.com/janpfischer
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -23,8 +26,8 @@ manifest:
     - name: forager-zmk-module
       remote: carrefinho
       revision: main
-    - name: prospector-zmk-module
-      remote: carrefinho
+    - name: zmk-dongle-screen
+      remote: janpfischer
       revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar

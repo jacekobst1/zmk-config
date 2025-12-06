@@ -20,7 +20,7 @@ include:
 
     # Urchin
   - board: seeeduino_xiao_ble
-    shield: urchin_dongle prospector_adapter
+    shield: urchin_dongle dongle_screen
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: urchin_dongle
@@ -40,7 +40,7 @@ include:
 
     # Forager
   - board: seeeduino_xiao_ble
-    shield: forager_dongle prospector_adapter
+    shield: forager_dongle dongle_screen
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: forager_dongle
