@@ -49,7 +49,7 @@ layers:
   - - '&mkp LCLK'
     - '&mkp RCLK'
     - {type: held}
-    - '&con_sys_boot_td'
+    - '&sys_boot_td'
   App nav:
   - - ''
     - {t: Gui+7, h: Ctl+7}
@@ -81,7 +81,7 @@ layers:
     - ''
     - ''
     - ''
-  - - '&bat_sys_boot_td'
+  - - '&sys_boot_td'
     - {type: held}
     - ENTER
     - BACKSPACE
