@@ -18,7 +18,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3.0
       import: app/west.yml
     - name: urchin-zmk-module
       remote: duckyb
@@ -28,7 +28,7 @@ manifest:
       revision: main
     - name: zmk-dongle-screen
       remote: janpfischer
-      revision: upgrade-4.1
+      revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
